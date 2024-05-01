@@ -1,0 +1,19 @@
+/*
+Theme Name: dc24-cbt-base
+Theme URI: https:/unprinted.ch
+Author: dc
+Author URI: https:/unprinted.ch
+Description: Base theme to include tailwind into block theme
+Requires at least: 6.0
+Tested up to: 6.5.2
+Requires PHP: 5.7
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dc24-cbt-base
+Tags: blog, news, portfolio, full-site-editing, 
+*/
+
+h1 a{
+        text-decoration: none;
+}
