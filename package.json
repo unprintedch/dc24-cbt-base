@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "prebuild": "node dc24-theme.js",
     "dev": "npm-run-all --parallel build:main  build:admin",
     "build:main": "tailwindcss -i ./css/style.css -o ./build/style.css --postcss  --watch",
     "build:admin": "tailwindcss -i ./css/editor.css -o ./build/editor.css --postcss --config tailwind.admin.config.js --watch"

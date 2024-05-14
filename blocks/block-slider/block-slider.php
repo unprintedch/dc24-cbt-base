@@ -22,36 +22,6 @@ if (!empty($block['align'])) {
 }
 
 $is_admin = is_admin();
-// load all post form the calendrier category order by meta starting date
-
-// $globale_styles = wp_remote_get("http://winbiz.local/wp-json/wp/v2/global-styles/themes/dc24-cbt-base");
-// var_dump($globale_styles);
-
-
-$global_settings = wp_get_global_settings();
-$global_styles = wp_get_global_styles();
-
-
-//var_dump($global_settings);
-//var_dump($global_styles["elements"]);
-
-// $dataArray = [
-//     'name' => 'John Doe',
-//     'email' => 'john.doe@example.com',
-//     'age' => 30
-// ];
-
-// $filePath = 'data.json'; // Path where the JSON file will be saved
-
-// // Call the function
-// $result = createAndWriteJsonInTheme($dataArray, $filePath);
-// echo $result; // Output the result
-
-$newConfig = "      fontSize: {
-    'h4': '1.25rem',  // for example, 20px
-},";
-$result = updateTailwindConfig($newConfig);
-echo $result;
 
 
 

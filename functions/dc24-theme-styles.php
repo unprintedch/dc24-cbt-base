@@ -1,27 +1,25 @@
 <?php
 
-// function updateTailwindConfig($newConfig) {
-//     $themeDirectory = get_template_directory();
-//     $filePath = "$themeDirectory/tailwind.config.js"; // Adjust the path as necessary
+function dc24_get_theme_styles()
+{
 
-//     // Data to append
-//     $dataToAppend = "\nmodule.exports = {\n  theme: {\n    extend: {\n" . $newConfig . "\n    }\n  }\n};\n";
+    $global_settings = wp_get_global_settings();
+    $global_styles = wp_get_global_styles();
 
-//     // Append to the file
-//     if (file_put_contents($filePath, $dataToAppend, FILE_APPEND) === false) {
-//         return 'Error writing to file.';
-//     }
-
-//     return 'Config successfully updated.';
-// }
-
-
-function createAndWriteJsonInTheme($data) {
+    
+    $newConfig = "      fontSize: {
+        'h4': '1.25rem',  // for example, 20px
+    },";
+   return $result;
+    
+}
 
 
+function dc24_get_theme_styles_create_json($data)
+{
     // Get the current theme directory
     $themeDirectory = get_template_directory();
-    $fileName = $fileName . '.json';
+    $fileName = "dc24-theme-styles.json";
 
     // Create the full file path
     $filePath = $themeDirectory . '/' . $fileName;
@@ -44,4 +42,3 @@ function createAndWriteJsonInTheme($data) {
     // Return success message
     return 'Data successfully written to ' . $filePath;
 }
-
