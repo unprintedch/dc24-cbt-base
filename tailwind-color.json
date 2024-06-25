@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Primary",
+        "slug": "primary",
+        "color": "#0000df"
+    },
+    {
+        "name": "Primary-hover",
+        "slug": "primary-hover",
+        "color": "#f080fa"
+    },
+    {
+        "name": "Secondary",
+        "slug": "secondary",
+        "color": "#ff9d00"
+    },
+    {
+        "name": "Secondary-hover",
+        "slug": "secondary-hover",
+        "color": "#637df2"
+    },
+    {
+        "name": "Gray dark",
+        "slug": "gray-dark",
+        "color": "#000000"
+    },
+    {
+        "name": "Gray warm",
+        "slug": "gray-warm",
+        "color": "#6c6c6c"
+    },
+    {
+        "name": "Gray medium",
+        "slug": "gray-medium",
+        "color": "#e8e8e8"
+    },
+    {
+        "name": "Gray light",
+        "slug": "gray-light",
+        "color": "#f4f4f4"
+    },
+    {
+        "name": "White",
+        "slug": "white",
+        "color": "#ffffff"
+    },
+    {
+        "color": "#2ad27b",
+        "name": "strange-green",
+        "slug": "custom-strange-green"
+    },
+    {
+        "color": "#808080",
+        "name": "GRAY 2",
+        "slug": "custom-gray-2"
+    }
+]

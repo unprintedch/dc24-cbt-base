@@ -3,25 +3,52 @@
 <?php
 // require_once get_template_directory() . '/block-variation/dc24-register-block-variation.php';
 require_once get_template_directory() . '/functions/dc24-block-register.php';
+require_once get_template_directory() . '/functions/dc24-enqueue.php';
 require_once get_template_directory() . '/functions/dc24-block-styles.php';
 require_once get_template_directory() . '/functions/dc24-theme-styles.php';
-?>
+require_once get_template_directory() . '/functions/dc24-menu-walker.php';
+require_once get_template_directory() . '/functions/dc24-facet.php';
+require_once get_template_directory() . '/functions/dc24-gravityform.php';
+require_once get_template_directory() . '/functions/dc24-acf.php';
 
-<?php
-add_action( 'wp_enqueue_scripts', 'dc24_enqueue_styles' );
-function dc24_enqueue_styles()
+add_filter('aos_init', function ($aos_init) {
+  return '
+  var aoswp_params = {
+      "offset":"100",
+      "duration":"200",
+      "easing":"ease-in-out",
+      "delay":"200",
+      "once": false
+      };
+  ';
+});
+
+
+function register_theme_menus()
 {
-  wp_enqueue_style('front-styles', get_template_directory_uri() . '/build/style.css');
+  register_nav_menus(array(
+    'primary' => __('Primary Menu'),
+    'footer' => __('Footer Menu'),
+  ));
+}
+add_action('init', 'register_theme_menus');
+
+
+function add_sticky_header_body_class($classes) {
+  if (is_page()) {
+      // Check if the ACF field 'sticky_header' is enabled for the current page
+      if (get_field('sticky_header')) {
+          $classes[] = 'has-sticky-header';
+      }
+  }
+  return $classes;
+}
+add_filter('body_class', 'add_sticky_header_body_class');
+
+
+function my_acf_init() {
+    
+  acf_update_setting('google_api_key', 'AIzaSyDT2r_nPHuX3M2Wdstpt0g3DajsyGFIZrw');
 }
 
-add_action('enqueue_block_editor_assets', 'dc24_enqueue_block_editor_styles');
-function dc24_enqueue_block_editor_styles()
-{
-  // Enqueue the editor stylesheet.
-  wp_enqueue_style(
-    'dc24_enqueue_block_editor_styles',                 // Handle for the stylesheet.
-    get_theme_file_uri('/build/editor.css'), // Path to the stylesheet file.
-    array(),                                      // Define dependencies.
-    wp_get_theme()->get('Version')                // Version number for cache busting.
-  );
-}
+add_action('acf/init', 'my_acf_init');

@@ -1,0 +1,23 @@
+{
+    "name": "dc24/header",
+    "title": "Header",
+    "description": "header block",
+    "category": "formatting",
+    "icon": "format-image",
+    "keywords": [
+        "Hero",
+        "header",
+        "navigation",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "block-header.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "customClassName": true,
+        "jsx": true
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "dc24/copyright",
+    "title": "copyright",
+    "description": "A block for displing the copyright information.",
+    "category": "formatting",
+    "icon": "format-date",
+    "keywords": [
+        "footer",
+        "date",
+        "copyright",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "block-copyright.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}

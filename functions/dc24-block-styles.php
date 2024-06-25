@@ -83,3 +83,17 @@ register_block_style(
         'label'     => __( 'Thick line' ),
     )
 );
+register_block_style(
+    'core/list',
+    array(
+        'name'      => 'check',
+        'label'     => __( 'Check' ),
+    )
+);
+register_block_style(
+    'core/heading',
+    array(
+        'name'      => 'big-title',
+        'label'     => __( 'Big title' ),
+    )
+);

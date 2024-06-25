@@ -1,0 +1,24 @@
+{
+    "name": "dc24/formation",
+    "title": "formation",
+    "description": "A block for displing the formation inscription.",
+    "category": "formatting",
+    "icon": "format-date",
+    
+    "keywords": [
+        "footer",
+        "date",
+        "formation",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "block-formation.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}

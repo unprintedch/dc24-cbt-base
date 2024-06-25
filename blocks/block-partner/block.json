@@ -1,0 +1,23 @@
+{
+    "name": "dc24/partner",
+    "title": "partner",
+    "description": "A block for displaying the partners.",
+    "category": "formatting",
+    "icon": "format-date",
+    "keywords": [
+        "grid",
+        "facet",
+        "partner",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "block-partner.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}

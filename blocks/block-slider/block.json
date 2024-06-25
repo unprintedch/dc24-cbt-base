@@ -1,10 +1,11 @@
 {
-    "name": "dc23/slider",
+    "name": "dc24/slider",
     "title": "Slider hero",
     "description": "Un carousel hero",
     "category": "formatting",
     "icon": "format-image",
     "keywords": ["Hero", "carousel", "slider",  "dc23"],
+    "script": "file:./slider.js",
     "acf": {
         "mode": "auto",
         "renderTemplate": "block-slider.php"

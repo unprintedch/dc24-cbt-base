@@ -2,6 +2,59 @@
 	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
 	"settings": {
 		"appearanceTools": true,
+		"color": {
+			"palette":[
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"color": "#000000"
+				  },
+				  {
+					"name": "Primary-hover",
+					"slug": "primary-hover",
+					"color": "#FF0000"
+				  },
+				  {
+					"name": "Secondary",
+					"slug": "secondary",
+					"color": "#FF0000"
+				  },
+				  {
+					"name": "Secondary-hover",
+					"slug": "secondary-hover",
+					"color": "#000000"
+				  },
+				  {
+					"name": "Gray dark",
+					"slug": "gray-dark",
+					"color": "#1c1c1c"
+				  },
+				  {
+					"name": "Gray warm",
+					"slug": "gray-warm",
+					"color": "#84380e"
+				  },
+				  {
+					"name": "Gray medium",
+					"slug": "gray-medium",
+					"color": "#7e7e7e"
+				  },
+				  {
+					"name": "Gray light",
+					"slug": "gray-light",
+					"color": "#f4f4f4"
+				  },
+				  {
+					"name": "White",
+					"slug": "white",
+					"color": "#ffffff"
+				  }
+			],
+			"defaultPalette": false,
+		   "defaultGradients": false,
+		   "defaultDuotone": false,
+			"gradients": []
+		},
 		"layout": {
 			"contentSize": "620px",
 			"wideSize": "1000px"
@@ -17,7 +70,29 @@
 			}
 		},
 		"typography": {
-			
+			"fontSizes": [
+				{
+					"slug": "small",
+					"size": "12px",
+					"name": "Small"
+				},
+				{
+					"slug": "medium",
+					"size": "18px",
+					"name": "Medium"
+				},
+				{
+					"slug": "large",
+					"size": "75px",
+					"name": "Large"
+				},
+				{
+					"slug": "x-large",
+					"size": "100px",
+					"name": "X Large"
+				}
+	
+			],
 			"fontFamilies": [
 				{
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",

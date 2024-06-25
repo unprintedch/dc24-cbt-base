@@ -1,0 +1,23 @@
+{
+    "name": "dc24/test",
+    "title": "test",
+    "description": "A block for displing the test information.",
+    "category": "formatting",
+    "icon": "format-date",
+    "keywords": [
+        "footer",
+        "date",
+        "test",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "block-test.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}
