@@ -1,0 +1,23 @@
+{
+    "name": "dc24/accordion",
+    "title": "accordion",
+    "description": "A block for displing the accordion information.",
+    "category": "formatting",
+    "icon": "format-date",
+    "keywords": [
+        "footer",
+        "date",
+        "accordion",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "edit",
+        "renderTemplate": "block-accordion.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}

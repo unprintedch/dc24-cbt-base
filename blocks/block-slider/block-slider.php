@@ -45,43 +45,41 @@ $is_admin = is_admin();
     return;
 endif; ?>
 
-<div <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?> z-10 top-0 w-full h-[100vh] sticky">
-    <div class="relative z-20 ">
-        <div class="absolute bottom-44 left-6 z-10  pointer-events-auto ">
-            <h2 class="text-white uppercase text-7xl "><?php echo $title ?></h2>
+<div <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?> z-10 top-0  sticky h-screen overflow-hidden">
+    <div class="absolute lg:bottom-0 bottom-20 left-[24px] m-auto right-0 z-10  pointer-events-auto xl:h-[60%] h-[500px]  ">
+        <div class="container">
+            <h2 class="text-white uppercase text-[50px] lg:text-[74px] "><?php echo $title ?></h2>
             <!-- If we need navigation buttons -->
             <div class="flex  relative w-[160px] items-center gap-3 pb-4 text-white mt-6">
                 <div class="dc24-swiper-button-prev flex items-center"><i class="fa-thin fa-chevron-left"></i></div>
                 <div class="dc24-swiper-pagination relative "></div>
                 <div class="dc24-swiper-button-next flex items-center"><i class="fa-thin fa-chevron-right"></i></div>
             </div>
-            <p class="text-white  text-xl mb-6"><?php echo $subtitle ?></p>
-            <a href="<?php echo $link["url"] ?>" class="rounded-full bg-primary pt-[10px] pb-[6px] pr-4 pl-4 text-xs uppercase text-white shadow-lg"><?php echo $link["title"] ?></a>
-        </div>
-        <div class="flex flex-col justify-center items-center absolute bottom-12 w-full z-20 pointer-event-none">
-            <div class="text-sm text-white mb-2">scroll down</div>
-            <i class="fa-light fa-chevron-down text-white text-sm"></i>
-        </div>
-
-        <!-- Slider main container -->
-        <div class="swiper">
-
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper relative z-0">
-                <?php foreach ($slides as $slide) :
-                    $image_id = $slide["image"];
-                    $image_caption = $slide["Caption"];
-                ?>
-                    <div class="swiper-slide relative min-h-screen">
-                        <img class="min-h-screen object-cover w-full" src="<?php echo esc_url(wp_get_attachment_image_url($image_id, 'full')); ?>" alt="">
-                        <div class="absolute  right-64 bottom-44 text-white uppercase font-medium text-[14px] text-right border-t border-white pt-6">
-                            <?php echo $image_caption; ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-
-            <!-- If we need scrollbar -->
+            <p class="text-white  text-xl mb-6 w-[320px]"><?php echo $subtitle ?></p>
+            <a href="<?php echo $link["url"] ?>" class="rounded-full bg-primary pt-[10px] pb-[6px] pr-4 pl-4 text-xs uppercase text-white shadow-lg font-semibold"><?php echo $link["title"] ?></a>
         </div>
     </div>
+    <div class="flex flex-col justify-center items-center absolute lg:bottom-12 bottom-6 w-full z-20 pointer-event-none">
+        <i class="fa-light fa-chevron-down text-white text-sm"></i>
+    </div>
+
+    <!-- Slider main container -->
+    <div class="swiper  h-screen">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <?php foreach ($slides as $slide) :
+                $image_id = $slide["image"];
+                $image_caption = $slide["Caption"];
+            ?>
+                <div class="swiper-slide h-screen bg-cover bg-black bg-no-repeat  bg-[center_top_20%]" style="background-image: url(<?php echo esc_url(wp_get_attachment_image_url($image_id, 'full')); ?>)">
+                    <div class="absolute  lg:right-64 right-6 bottom-44 text-white uppercase font-medium text-[14px] text-right border-t border-white pt-6 ">
+                        <?php echo $image_caption; ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- If we need scrollbar -->
+    </div>
+
 </div>

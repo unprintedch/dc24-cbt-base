@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-video', {
         direction: 'horizontal',
         loop: false,
-        slidesPerView: 3,
-        spaceBetween: 80,
+        slidesPerView: 4,
+        spaceBetween: 120,
         centeredSlides: false,
         breakpoints: {
             // when window width is >= 320px
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 spaceBetween: 60
             },
             1100: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 60
             }
         },

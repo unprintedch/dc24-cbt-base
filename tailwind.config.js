@@ -26,6 +26,16 @@ module.exports = {
     "css/safelist.txt", "./scripts/*.js"
   ],
   theme: {
+    container: {
+      center: true,
+    },
+    screens: {
+      'sm': '100%',
+      'md': '100%',
+      'lg': '1140px',
+      'xl': '1440px',
+      '2xl': '1640px',
+    },
     extend: {
       colors: customColors,
     },

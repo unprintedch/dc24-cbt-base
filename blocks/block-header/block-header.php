@@ -51,24 +51,31 @@ endif; ?>
 
 
 <div <?php echo esc_attr($anchor); ?> class="<?php echo $classes ?> fixed alignfull top-0 h-36 px-6 inset-0">
-    <div class="flex justify-between items-baseline">
-        <div class="  font-normal pt-16 ">
-            <?php wp_nav_menu(
-                array(
-                    'container_id'    => 'primary',
-                    'container_class' => '',
-                    'menu_class'      => 'menu dropdown flex gap-16 items-baseline',
-                    'li_class'        => 'font-normal uppercase  uppercase text-[13px]',
-                    'fallback_cb'     => false
-                )
-            ); ?>
+    <div class="flex justify-between items-baseline container pt-8">
+        <?php wp_nav_menu(
+            array(
+                'container_id'    => 'primary',
+                'container_class' => 'font-normal  hidden lg:flex',
+                'menu_class'      => 'menu dropdown  gap-16 items-baseline flex',
+                'li_class'        => 'font-medium uppercase  uppercase text-[13px]',
+                'fallback_cb'     => false
+            )
+        ); ?>
+
+
+        <div class="lg:hidden flex justify-start ">
+            <div class="burger-menu justify-items-start">
+                <span class="bg-white"></span>
+                <span class="bg-white"></span>
+                <span class="bg-white"></span>
+            </div>
         </div>
         <div class="">
             <div class="flex gap-6 items-start">
                 <a class="bg-[hsla(0,0%,68.2%,0.6)] uppercase bg-opacity-40  rounded-[30px] pt-[10px] pb-[6px] pr-4 pl-4 text-xs text-white flex-none">FR</a>
                 <a class="bg-[hsla(0,0%,68.2%,0.6)] uppercase bg-opacity-40  rounded-[30px] pt-[10px] pb-[6px] pr-4 pl-4 text-xs text-white flex-none">Espace membre</a>
                 <div class="flex flex-col items-end">
-                    <a href="<?php echo get_site_url(  ) ?>">
+                    <a href="<?php echo get_site_url() ?>">
                         <?php if ($white_header) : ?>
                             <img class="w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_black.svg" alt="">
                         <?php else : ?>

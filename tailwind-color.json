@@ -51,7 +51,7 @@
     },
     {
         "color": "#808080",
-        "name": "GRAY 2",
-        "slug": "custom-gray-2"
+        "name": "gray text",
+        "slug": "gray-text"
     }
 ]

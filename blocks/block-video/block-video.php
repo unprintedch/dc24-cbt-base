@@ -78,7 +78,6 @@ $query = new WP_Query($args);
         ?>
 
                 <a href="<?php echo get_permalink() ?>" class="group flex flex-col border border-gray-100 bg-white rounded-lg shadow-lg mb-4 relative hover:shadow-sm transition-all">
-                    <img class="absolute top-5 left-5 z-10 h-12 w-12" src="<?php echo get_stylesheet_directory_uri() ?>/assets/w.svg" alt="">
                     <?php
                     if ($image) {
                         $attachment_id =  $image;

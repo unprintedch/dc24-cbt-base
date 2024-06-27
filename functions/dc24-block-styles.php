@@ -97,3 +97,10 @@ register_block_style(
         'label'     => __( 'Big title' ),
     )
 );
+register_block_style(
+    'core/details',
+    array(
+        'name'      => 'big-details',
+        'label'     => __( 'Big details' ),
+    )
+);

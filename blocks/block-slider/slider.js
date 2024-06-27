@@ -1,8 +1,7 @@
 // js/slider.js
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('slider.js');
-    const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
+    var swiper = new Swiper('.swiper', {
+        effect: "fade",
         loop: true,
         pagination: {
             el: ".dc24-swiper-pagination",

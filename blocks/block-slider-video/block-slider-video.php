@@ -69,7 +69,6 @@ endif; ?>
                         <a class="flex relative aspect-[3/4] " href="<?php echo $link ?>">
                             <img class="object-cover scale-100 group-hover:scale-110 transition-all" src="<?php echo esc_url(wp_get_attachment_image_url($image_id, 'full')); ?>" alt="">
                             <div class="title absolute  bottom-12 left-8 right-8">
-                                <div class="dc24-wb-icon"></div>
                                 <h5 class="text-white font-normal mt-4">
                                     <?php echo $title ?>
                                 </h5>

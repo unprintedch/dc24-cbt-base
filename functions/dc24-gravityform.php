@@ -71,3 +71,9 @@ function dc24_get_booked_list_from_session_id( $unique_id)
     // Sum the participants field for matching entries
    return $entries;
 }
+
+
+add_filter( 'gform_default_styles', function( $styles ) {
+    return '{"theme":"orbital","inputSize":"md","inputBorderRadius":"20","inputBorderColor":"#e3e3e3","inputBackgroundColor":"#e3e3e3","inputColor":"#000000","inputPrimaryColor":"#204ce5","labelFontSize":"16","labelColor":"#000000","descriptionFontSize":"16","descriptionColor":"#000000","buttonPrimaryBackgroundColor":"#204ce5","buttonPrimaryColor":"#fff"}';
+} );
+
