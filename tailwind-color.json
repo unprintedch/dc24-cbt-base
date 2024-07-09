@@ -22,7 +22,7 @@
     {
         "name": "Gray dark",
         "slug": "gray-dark",
-        "color": "#000000"
+        "color": "#808080"
     },
     {
         "name": "Gray warm",
@@ -51,7 +51,7 @@
     },
     {
         "color": "#808080",
-        "name": "gray text",
-        "slug": "gray-text"
+        "name": "GRAY 2",
+        "slug": "custom-gray-2"
     }
 ]

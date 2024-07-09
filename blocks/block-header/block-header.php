@@ -50,7 +50,7 @@ $is_admin = is_admin();
 endif; ?>
 
 
-<div <?php echo esc_attr($anchor); ?> class="<?php echo $classes ?> fixed alignfull top-0 h-36 px-6 inset-0">
+<div <?php echo esc_attr($anchor); ?> class="<?php echo $classes ?> dc24-navigation fixed alignfull top-0 h-36 px-6 inset-0">
     <div class="flex justify-between items-baseline container pt-8">
         <?php wp_nav_menu(
             array(

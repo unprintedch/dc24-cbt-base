@@ -1,18 +1,22 @@
 <?php
+
 /**
  * Gravity Perks // Inventory // Add Number as a Supported Field Type
  * https://gravitywiz.com/documentation/gravity-forms-inventory/
  */
-add_filter( 'gpi_supported_field_types', function( $field_types ) {
-	// Update "number" to desired field type.
-	$field_types['number'] = true;
+add_filter('gpi_supported_field_types', function ($field_types) {
+    // Update "number" to desired field type.
+    $field_types['number'] = true;
 
-	return $field_types;
-} );
+    return $field_types;
+});
 
-add_filter( 'gpi_inventory_limit_advanced_2_31', 'dc24_setlimit' );
-function dc24_setlimit( ) {
+add_filter('gpi_inventory_limit_advanced_2_31', 'dc24_setlimit');
+function dc24_setlimit()
+{
     // get post id form the url
+    if(!isset($_GET['postid']) || !isset($_GET['sessionid'])) return;
+
     $post_id = $_GET['postid'];
     $repeater_field = 'cours';
     $unique_id = $_GET['sessionid'];
@@ -27,7 +31,7 @@ function dc24_setlimit( ) {
 
 // get the number of booking for frontend
 
-function dc24_get_booked_count_from_session_id( $unique_id)
+function dc24_get_booked_count_from_session_id($unique_id)
 {
     // Retrieve entries from Gravity Form that match the unique ID
     $form_id = '2';
@@ -52,7 +56,7 @@ function dc24_get_booked_count_from_session_id( $unique_id)
 }
 // get the number of booking for frontend
 
-function dc24_get_booked_list_from_session_id( $unique_id)
+function dc24_get_booked_list_from_session_id($unique_id)
 {
     // Retrieve entries from Gravity Form that match the unique ID
     $form_id = '2';
@@ -69,11 +73,15 @@ function dc24_get_booked_list_from_session_id( $unique_id)
     ];
     $entries = GFAPI::get_entries($form_id, $search_criteria);
     // Sum the participants field for matching entries
-   return $entries;
+    return $entries;
 }
 
 
-add_filter( 'gform_default_styles', function( $styles ) {
-    return '{"theme":"orbital","inputSize":"md","inputBorderRadius":"20","inputBorderColor":"#e3e3e3","inputBackgroundColor":"#e3e3e3","inputColor":"#000000","inputPrimaryColor":"#204ce5","labelFontSize":"16","labelColor":"#000000","descriptionFontSize":"16","descriptionColor":"#000000","buttonPrimaryBackgroundColor":"#204ce5","buttonPrimaryColor":"#fff"}';
-} );
+add_filter('gform_default_styles', function ($styles) {
+    return '{"theme":"orbital","inputSize":"md","inputBorderRadius":"20","inputBorderColor":"#e3e3e3","inputBackgroundColor":"#e3e3e3","inputColor":"#000000","inputPrimaryColor":"#204ce5","labelFontSize":"16","labelColor":"#000000","descriptionFontSize":"16","descriptionColor":"#000000","buttonPrimaryBackgroundColor":"#0000df","buttonPrimaryColor":"#fff"}';
+});
 
+add_filter( 'gform_address_display_format', 'address_format', 10, 2 );
+function address_format( $format, $field ) {
+return 'zip_before_city';
+}

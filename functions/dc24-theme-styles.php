@@ -18,7 +18,7 @@ function dc24_handle_global_styles_save($post_id, $post, $update)
     $heading_update = dc24_write_custom_heading_css($global_styles);
     dc24_write_custom_colors_json($global_settings);
 
-    // For example, you can log a message or trigger a custom action
+    //Log for debug
     error_log($heading_update);
   
 }

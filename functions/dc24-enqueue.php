@@ -4,6 +4,9 @@ function dc24_enqueue_styles()
 {
   wp_enqueue_style('front-styles', get_template_directory_uri() . '/build/style.css');
   wp_enqueue_script('front-scripts', get_template_directory_uri() . '/build/app.js', array('jquery'), null, true);
+  wp_localize_script('front-scripts', 'ajax_object', array(
+    'ajax_url' => admin_url('admin-ajax.php')
+  ));
 }
 
 add_action('enqueue_block_editor_assets', 'dc24_enqueue_block_editor_styles');

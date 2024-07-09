@@ -1,0 +1,23 @@
+{
+    "name": "dc24/formation-grid",
+    "title": "formation-grid",
+    "description": "A block for displing the formation-grid information.",
+    "category": "formatting",
+    "icon": "format-date",
+    "keywords": [
+        "footer",
+        "date",
+        "formation-grid",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "block-formation-grid.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}

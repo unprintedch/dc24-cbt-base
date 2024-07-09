@@ -23,6 +23,5 @@ if (!empty($block['align'])) {
 ?>
 
 <div>
- 
-<?php //dc24_update_acf_repeater_on_post_save_test() ?>
+<?php add_custom_classes_to_safelist(1132) ?>
 </div>

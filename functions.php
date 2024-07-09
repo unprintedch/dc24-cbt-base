@@ -2,6 +2,7 @@
 
 <?php
 // require_once get_template_directory() . '/block-variation/dc24-register-block-variation.php';
+require_once get_template_directory() . '/functions/dc24-functions.php';
 require_once get_template_directory() . '/functions/dc24-block-register.php';
 require_once get_template_directory() . '/functions/dc24-enqueue.php';
 require_once get_template_directory() . '/functions/dc24-block-styles.php';
@@ -10,6 +11,9 @@ require_once get_template_directory() . '/functions/dc24-menu-walker.php';
 require_once get_template_directory() . '/functions/dc24-facet.php';
 require_once get_template_directory() . '/functions/dc24-gravityform.php';
 require_once get_template_directory() . '/functions/dc24-acf.php';
+require_once get_template_directory() . '/functions/dc24-safelist-update.php';
+require_once get_template_directory() . '/functions/dc24-calendar.php';
+require_once get_template_directory() . '/functions/dc24-menu-formation.php';
 
 add_filter('aos_init', function ($aos_init) {
   return '

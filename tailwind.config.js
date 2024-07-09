@@ -23,7 +23,10 @@ module.exports = {
     './template-parts/*.php',
     '*.php',
     "./blocks/**/*.php", "./css/*.css", 
-    "css/safelist.txt", "./scripts/*.js"
+    "css/safelist.txt", 
+    "./scripts/*.js",
+    "./tailwind.safelist.json", 
+    "./functions/*.php", 
   ],
   theme: {
     container: {
@@ -31,7 +34,7 @@ module.exports = {
     },
     screens: {
       'sm': '100%',
-      'md': '100%',
+      'md': '960px',
       'lg': '1140px',
       'xl': '1440px',
       '2xl': '1640px',
