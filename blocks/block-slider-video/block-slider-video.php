@@ -33,13 +33,11 @@ $args = array(
     'order' => 'ASC',
     'category_name' => 'featured', // Category slug
 
-
 );
 
 // The Query
 $query = new WP_Query($args);
 ?>
-
 
 <?php if ($is_admin) : ?>
     <div class="admin-view-only flex items-center justify-center bg-slate-200 p-12 hover:bg-slate-300 transition-all">

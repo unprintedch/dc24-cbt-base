@@ -1,0 +1,23 @@
+{
+    "name": "dc24/formation-hero-inscription",
+    "title": "formation-hero-inscription",
+    "description": "A block for displing the formation-hero-inscription information.",
+    "category": "formatting",
+    "icon": "format-date",
+    "keywords": [
+        "footer",
+        "date",
+        "formation-hero-inscription",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "preview",
+        "renderTemplate": "block-formation-hero-inscription.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}

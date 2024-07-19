@@ -41,7 +41,7 @@ $slides = get_field("slides", $block['id']);
 endif; ?>
 
 
-<div <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?>    relative z-20 overflow-hidden">
+<div <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?> px-[3.38rem]  relative z-20 overflow-hidden">
 
 
     <!-- Slider main container -->
@@ -57,7 +57,7 @@ endif; ?>
             ?>
                 <div class="swiper-slide group">
                     <?php if (isset($link["url"])) : ?>
-                        <a class="flex gap-4 py-6" href="<?php echo $link["url"] ?>">
+                        <a class="flex gap-4 py-6 no-underline" href="<?php echo $link["url"] ?>">
                         <?php else : ?> 
                             <div class="flex gap-4 py-6">
                             <?php endif; ?>

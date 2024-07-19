@@ -56,7 +56,7 @@ endif; ?>
                 <div class="dc24-swiper-button-next flex items-center"><i class="fa-thin fa-chevron-right"></i></div>
             </div>
             <p class="text-white  text-xl mb-6 w-[320px]"><?php echo $subtitle ?></p>
-            <a href="<?php echo $link["url"] ?>" class="rounded-full bg-primary pt-[10px] pb-[6px] pr-4 pl-4 text-xs uppercase text-white shadow-lg font-semibold"><?php echo $link["title"] ?></a>
+            <a  href="<?php echo $link["url"] ?>" class="no-underline rounded-full bg-primary pt-[10px] pb-[6px] pr-4 pl-4 text-xs uppercase text-white shadow-lg font-semibold"><?php echo $link["title"] ?></a>
         </div>
     </div>
     <div class="flex flex-col justify-center items-center absolute lg:bottom-12 bottom-6 w-full z-20 pointer-event-none">

@@ -14,6 +14,7 @@ require_once get_template_directory() . '/functions/dc24-acf.php';
 require_once get_template_directory() . '/functions/dc24-safelist-update.php';
 require_once get_template_directory() . '/functions/dc24-calendar.php';
 require_once get_template_directory() . '/functions/dc24-menu-formation.php';
+// require_once get_template_directory() . '/functions/dc24-wpml.php';
 
 add_filter('aos_init', function ($aos_init) {
   return '

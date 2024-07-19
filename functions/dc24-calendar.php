@@ -5,7 +5,6 @@ add_action('wp_ajax_nopriv_generate_ics', 'generate_ics_file');
 
 function generate_ics_file()
 {
-
     // On recupère les données du formulaire (id et sesssion id)
     $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
     $session_id = isset($_POST['session_id']) ? $_POST['session_id'] : '';
@@ -30,8 +29,8 @@ function generate_ics_file()
             $icsContent .= "BEGIN:VEVENT\r\n";
             $icsContent .= "UID:" . uniqid() . "@yourdomain.com\r\n";
             $icsContent .= "DTSTAMP:" . gmdate('Ymd\THis\Z') . "\r\n";
-            $icsContent .= "DTSTART:" . $startDate->format('Ymd\THis\Z') . "\r\n";
-            $icsContent .= "DTEND:" . $endDate->format('Ymd\THis\Z') . "\r\n";
+            $icsContent .= "DTSTART;TZID=Europe/Zurich:" . $startDate->format('Ymd\THis') . "\r\n";
+            $icsContent .= "DTEND;TZID=Europe/Zurich:" . $endDate->format('Ymd\THis') . "\r\n";
             $icsContent .= "SUMMARY:" . $course['title'] . "\r\n";
             $icsContent .= "DESCRIPTION:" . $course['description'] . "\r\n";
             $icsContent .= "LOCATION:" . $course['location'] . "\r\n";
@@ -51,9 +50,16 @@ function get_course_data($course_id,  $session_id)
 
     // get the session data from the right course
     $courses = get_field('cours', $course_id);
-    // get title and parent title 
-    $course_title = get_the_title($course_id);
-    $parent_title = get_the_title(wp_get_post_parent_id($course_id));
+    // get the custom title of the course
+   
+    if(get_field('formation_title', $course_id)){
+        $course_title = get_field('formation_title', $course_id) ;
+    } else{
+        // get title and parent title 
+        $course_title = get_the_title($course_id);
+        $parent_title = get_the_title(wp_get_post_parent_id($course_id));
+        $course_title  = $parent_title . ' - ' . $course_title;
+    }
 
     // get the session data from the right course
     $course = array_filter($courses, function ($course) use ($session_id) {
@@ -68,7 +74,7 @@ function get_course_data($course_id,  $session_id)
     $description = get_course_description($session_id, $formateur, $dates);
 
     $return =  [
-        'title' => "Formation avec $formateur – $parent_title – $course_title ",
+        'title' => "Formation avec $formateur –  $course_title ",
         'description' => $description,
         'location' => $course[0]["info"]["place"],
         'dates' => $dates,
@@ -94,6 +100,7 @@ function get_course_description($unique_id, $formateur, $dates)
             $description .= "$key – $start/$end \\n";
         }
     };
+    $description .= "––––––––––––––––––––––––––––––––\\n";
 
     // Loop through each entry
     foreach ($entries as $entry) {

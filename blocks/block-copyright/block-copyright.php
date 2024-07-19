@@ -23,5 +23,5 @@ if (!empty($block['align'])) {
 ?>
 
 <div>
-©copyrights Winbiz <?php echo date("Y"); ?>
+©copyright Winbiz <?php echo date("Y"); ?>
 </div>

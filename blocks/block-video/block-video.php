@@ -36,7 +36,7 @@ endif;
 // Arguments for the WP Query
 $args = array(
     'post_type' => 'video', // Your custom post type name
-    'posts_per_page' => -1, // Retrieve all posts
+    'posts_per_page' => 4, // Retrieve all posts
     'orderby' => 'date',
     'order' => 'ASC',
     "facetwp"        => true
@@ -50,6 +50,7 @@ $query = new WP_Query($args);
         <div class="flex gap-4">
             <?php echo facetwp_display('facet', 'search'); ?>
             <?php echo facetwp_display('facet', 'categories'); ?>
+          
         </div>
         <div class="flex gap-4">
             <?php echo facetwp_display('facet', 'tri'); ?>
@@ -77,7 +78,7 @@ $query = new WP_Query($args);
                 $image = get_field("image", $post_id);
         ?>
 
-                <a href="<?php echo get_permalink() ?>" class="group flex flex-col border border-gray-100 bg-white rounded-lg shadow-lg mb-4 relative hover:shadow-sm transition-all">
+                <a href="<?php echo get_permalink() ?>" class=" no-underline group flex flex-col border border-gray-100 bg-white rounded-lg shadow-lg mb-4 relative hover:shadow-sm transition-all">
                     <?php
                     if ($image) {
                         $attachment_id =  $image;
@@ -102,10 +103,15 @@ $query = new WP_Query($args);
         } else {
             // No posts found
             echo '<p class="text-gray-600">No videos found.</p>';
-        }
-
+        };
+     
         // Restore original Post Data
         wp_reset_postdata();
         ?>
+             
+
+    </div>
+    <div class="flex justify-center pt-6">
+            <?php echo facetwp_display('facet', 'pager_video'); ?>
     </div>
 </div>

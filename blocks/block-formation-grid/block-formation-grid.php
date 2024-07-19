@@ -41,7 +41,8 @@ endif; ?>
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'orderby'        => 'menu_order',
-        'order'          => 'ASC'
+        'order'          => 'ASC',
+        'suppress_filters' => false
     );
 
     $posts = get_posts($args);
@@ -65,7 +66,7 @@ endif; ?>
             foreach ($formation_hierarchy[0] as $parent) {
                 $parent_id = $parent['post_id'];
                 $parent_title = $parent['post_title'];
-                if($parent_id == "1602" ){
+                if($parent_id == "1602" || $parent_id == "2410" || $parent_id == "2411" || $parent_id == "2418"){
                     $classes = "text-primary ";
                 } else {
                     $classes = "";

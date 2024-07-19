@@ -48,11 +48,21 @@ $query = new WP_Query($args);
         <div class="w-4/12 flex flex-col gap-6 dc24-filters dc24-filters__partner mx-auto p-3 pt-12">
             <?php echo facetwp_display('facet', 'search'); ?>
             <?php echo facetwp_display('facet', 'partner_type'); ?>
+
+            <div class="wp-block-group py-4">
+                <p>Vous souhaitez devenir partenaire Winbiz ?<br> Faites-nous une demande.</p>
+                <div class="wp-block-buttons  py-3">
+                    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo get_permalink(1055) ?>">remplir la demande</a></div>
+                </div>
+            </div>
+
         </div>
         <div class="w-7/12 justify-self-end">
             <?php echo facetwp_display('facet', 'partner_map'); ?>
         </div>
     </div>
+
+
     <div class="facetwp-template">
         <?php
         // The Loop

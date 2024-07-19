@@ -72,10 +72,17 @@ endif; ?>
         </div>
         <div class="">
             <div class="flex gap-6 items-start">
-                <a class="bg-[hsla(0,0%,68.2%,0.6)] uppercase bg-opacity-40  rounded-[30px] pt-[10px] pb-[6px] pr-4 pl-4 text-xs text-white flex-none">FR</a>
-                <a class="bg-[hsla(0,0%,68.2%,0.6)] uppercase bg-opacity-40  rounded-[30px] pt-[10px] pb-[6px] pr-4 pl-4 text-xs text-white flex-none">Espace membre</a>
+                <?php do_action('wpml_add_language_selector') ?>
+                <?php
+                $current_lang = apply_filters('wpml_current_language', NULL);
+                if ($current_lang) { ?>
+                    <a href="https://my.winbiz.ch/<?php echo $current_lang ?> " class="bg-[hsla(0,0%,68.2%,0.6)] no-underline uppercase bg-opacity-40  rounded-[30px] pt-[10px] pb-[6px] pr-4 pl-4 text-xs text-white flex-none">
+                    <?php _e('Member Space', 'dc24'); ?>
+                    </a>
+                <?php }
+                ?>
                 <div class="flex flex-col items-end">
-                    <a href="<?php echo get_site_url() ?>">
+                    <a class="no-underline" href="<?php echo get_site_url() ?>">
                         <?php if ($white_header) : ?>
                             <img class="w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_black.svg" alt="">
                         <?php else : ?>
