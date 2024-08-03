@@ -1,0 +1,193 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@import "heading.css";
+@import "facet.css";
+@import "_block-style.css";
+@import "_gravityform.css";
+@import "_wpml.css";
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logged-in .dc24-navigation{
+    @apply pt-[32px];
+}
+
+h1,h2,h3,h4,h5,h6,p, a , summary, li, strong, span, div, label, button, input, select, textarea {
+    @apply antialiased ;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    @apply mb-2 mt-6; 
+}
+
+
+.dc24-swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    @apply relative h-[3px] rounded-[3px] bg-white/25
+}
+
+.dc24-swiper-pagination.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    @apply bg-white rounded-[3px];
+}
+
+.dc24-swiper-pagination-primary.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    @apply bg-primary rounded-[3px];
+}
+
+.dc24-swiper-pagination-primary.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    @apply relative h-[3px] rounded-[3px] bg-primary/25
+}
+
+
+
+
+.entry-content {
+    .wp-block-group {
+        @apply z-20 relative;
+    }
+
+    .wp-block-group.dc24-sticky-block {
+        @apply z-10 sticky top-0;
+    }
+  
+}
+
+
+.menu-item a {
+    @apply after:content-[""] relative no-underline;
+    &:after {
+        @apply bg-white h-[1px] w-0 absolute -bottom-1 left-0 transition-all;
+    }
+
+    &:hover {
+        &:after {
+            @apply w-full;
+        }
+    }
+}
+
+.menu-item.navigation-alt a {
+    @apply bg-primary pt-[10px] pb-[6px] pl-6 pr-6 rounded-full font-semibold relative text-white;
+
+    &:hover {
+        &:after {
+            @apply w-0;
+        }
+    }
+}
+
+.wp-block-button__link {
+    @apply pt-[10px] pb-[6px] drop-shadow-lg hover:drop-shadow-none
+}
+
+
+.is-style-badge-title {
+    @apply border-4 border-black rounded-full aspect-square max-w-[160px] flex items-center justify-center leading-8 uppercase pt-2 m-auto bottom-6;
+
+    &.has-primary-color {
+        @apply border-primary
+    }
+}
+
+
+
+.entry-content {
+    ul {
+        @apply list-disc list-inside
+    }
+
+}
+
+.site-maps a {
+    @apply no-underline
+}
+
+details {
+    >.wp-block-group {
+        @apply bg-gray-light p-4 mt-0;
+    }
+
+    p,
+    li {
+        @apply  text-lg
+    }
+
+    strong {
+        @apply font-medium
+    }
+}
+
+.wp-block-separator {
+    border-top: 1px solid;
+
+    &.is-style-thick-line {
+        border-top: 3px solid;
+        @apply mb-4
+    }
+}
+
+.dc24-overlay a{
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, .5), hsla(0, 0%, 100%, 0));
+        z-index: 20;
+    }
+    img{
+        @apply z-10 relative;
+    }
+    .title{
+        @apply z-30  ;
+    }
+}
+
+.dc24-wb-icon{
+    width: 0;
+    background: rgba(0, 0, 0, 0);
+    border-color: #0000df rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #0000df;
+    border-style: solid;
+    border-width: 15px 11px;
+}
+
+.burger-menu, .burger-menu-close, .burger-menu-mobile { 
+    @apply w-7 h-5  flex flex-col justify-between bg-transparent gap-[2px] ;
+    cursor: pointer;
+    span{
+        @apply   block w-full h-[3px] ; 
+        transition: all .2s ease-in-out;
+        &:nth-child(2){
+			@apply mx-auto w-full;
+        }
+    }
+    &:hover{
+        span{
+          
+            &:last-of-type{
+                width: 100%;
+            }
+        }
+    }
+  
+    &.close-mode{
+        span{
+            &:nth-of-type(1){
+                @apply rotate-45 translate-y-[9px];
+            }
+            &:nth-of-type(2){
+                width: 0;
+            }
+            &:last-of-type{
+                @apply -rotate-45 -translate-y-[9px] w-full;
+            }
+        }
+    }
+}
+
