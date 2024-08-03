@@ -1,22 +1,21 @@
 {
-    "name": "dc24/formation",
-    "title": "formation",
-    "description": "A block for displing the formation inscription.",
+    "name": "dc24/grid",
+    "title": "grid",
+    "description": "A block for displaying the grid.",
     "category": "formatting",
     "icon": "format-date",
-    
     "keywords": [
         "footer",
         "date",
-        "formation",
+        "video",
         "dc24"
     ],
     "acf": {
         "mode" : "preview",
-        "renderTemplate": "block-formation.php"
+        "renderTemplate": "block-grid.php"
     },
     "supports": {
-        "align": false,
+        "align": true,
         "anchor": false,
         "customClassName": true,
         "jsx": false
