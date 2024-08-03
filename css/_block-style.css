@@ -1,0 +1,40 @@
+.wp-block-details.is-style-big-details {
+  @apply border-b border-gray-200 font-medium;
+
+  summary {
+    @apply flex justify-between items-center cursor-pointer text-[35px] font-semibold pb-7;
+  }
+
+  summary::marker {
+    display: none;
+  }
+
+  summary::after {
+    @apply text-primary transition-all rotate-180 text-2xl;
+    content: "\f078";
+    font: var(--fa-font-light);
+  }
+
+  &[open] summary::after {
+    @apply transition-all rotate-0;
+  }
+}
+
+div.is-list-small ul.is-style-check {
+  li {
+    @apply text-[15px] leading-snug mb-0 pb-0;
+  }
+}
+
+ul.is-style-check {
+  @apply list-none text-[18px] font-medium;
+
+  li {
+    @apply flex items-start gap-2 mb-2 pt-2;
+
+    &:before {
+      @apply content-["\f00c"] flex items-start justify-center pt-[2px];
+      font: var(--fa-font-regular);
+    }
+  }
+}

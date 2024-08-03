@@ -1,0 +1,13 @@
+z-50
+z-10
+-z-20
+fixed
+absolute
+sticky
+inset-0
+bg-gradient-to-t
+from-black
+via-black/50
+to-transparent
+top-0
+lg:flex

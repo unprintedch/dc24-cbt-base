@@ -101,23 +101,26 @@
 			],
 			"fontFamilies": [
 				{
-					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
-					"name": "System Font",
-					"slug": "system-font"
-				}
+                    "fontFamily": "MaisonNeueExtendedBookItalic",
+                    "name": "Maison Neue Extended Book Italic",
+                    "slug": "maison-neue-extended-book-italic"
+                },
+                {
+                    "fontFamily": "MaisonNeueExtendedBook",
+                    "name": "Maison Neue Extended Book",
+                    "slug": "maison-neue-extended-book"
+                },
+                {
+                    "fontFamily": "GlanceSlabBook",
+                    "name": "Glance Slab Book",
+                    "slug": "glance-slab-book"
+                }
 			]
 		},
 		"useRootPaddingAwareAlignments": true
 	},
 	"templateParts": [
-		{
-			"area": "header",
-			"name": "header"
-		},
-		{
-			"area": "footer",
-			"name": "footer"
-		}
+		
 	],
 	"version": 2
 }

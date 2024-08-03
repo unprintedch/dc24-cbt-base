@@ -22,12 +22,7 @@ if (!empty($block['align'])) {
 }
 
 $post_id = get_the_ID();
-$white_header = get_field("white_header", $post_id);
-$classes = " bg-gradient-to-t from-transparent via-black/50 to-black text-white";
-if ($white_header) {
-    $classes = "bg-white text-black";
-}
-
+$classes = " ";
 
 $is_admin = is_admin();
 
@@ -50,7 +45,7 @@ $is_admin = is_admin();
 endif; ?>
 
 
-<div <?php echo esc_attr($anchor); ?> class="<?php echo $classes ?> dc24-navigation fixed alignfull top-0 h-36 px-6 inset-0">
+<div <?php echo esc_attr($anchor); ?> class="<?php echo $classes ?> bg-primary dc24-navigation  alignfull top-0 h-36 px-6 ">
     <div class="flex justify-between items-baseline container pt-8">
         <?php wp_nav_menu(
             array(
@@ -72,27 +67,7 @@ endif; ?>
         </div>
         <div class="">
             <div class="flex gap-6 items-start">
-                <?php do_action('wpml_add_language_selector') ?>
-                <?php
-                $current_lang = apply_filters('wpml_current_language', NULL);
-                if ($current_lang) { ?>
-                    <a href="https://my.winbiz.ch/<?php echo $current_lang ?> " class="bg-[hsla(0,0%,68.2%,0.6)] no-underline uppercase bg-opacity-40  rounded-[30px] pt-[10px] pb-[6px] pr-4 pl-4 text-xs text-white flex-none">
-                    <?php _e('Member Space', 'dc24'); ?>
-                    </a>
-                <?php }
-                ?>
-                <div class="flex flex-col items-end">
-                    <a class="no-underline" href="<?php echo get_site_url() ?>">
-                        <?php if ($white_header) : ?>
-                            <img class="w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_black.svg" alt="">
-                        <?php else : ?>
-                            <img class="w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_2.svg" alt="">
-                        <?php endif; ?>
-                    </a>
-                    <?php if (is_front_page()) : ?>
-                        <img class="w-[68px] mt-10" src="<?php echo get_stylesheet_directory_uri() ?>/assets/badge.svg" alt="">
-                    <?php endif; ?>
-                </div>
+               
             </div>
         </div>
     </div>

@@ -27,9 +27,9 @@ add_action('save_post', 'dc24_handle_global_styles_save', 10, 3);
 function dc24_write_custom_colors_json($global_settings)
 {
     $colors = $global_settings["color"]["palette"]["theme"];
-    $colors_custom = $global_settings["color"]["palette"]["custom"];
+    // $colors_custom = $global_settings["color"]["palette"]["custom"];
     // merge these two arrays
-    $colors = array_merge($colors, $colors_custom);
+    // $colors = array_merge($colors, $colors_custom);
 
 
     // Define the path to the JSON file
