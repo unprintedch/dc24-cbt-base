@@ -11,7 +11,7 @@
         "dc24"
     ],
     "acf": {
-        "mode" : "preview",
+        "mode" : "auto",
         "renderTemplate": "block-partner.php"
     },
     "supports": {

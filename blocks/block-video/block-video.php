@@ -66,6 +66,7 @@ $query = new WP_Query($args);
                 $post_id = get_the_ID();
                 // Get the video metadata   
                 $title = get_the_title();
+                $date_vid = get_field("date_publication", $post_id);
                 $date = get_the_date('d/m/Y');
                 $link = get_the_permalink();
                 $categories = get_the_terms(get_the_ID(), 'category');
@@ -90,7 +91,7 @@ $query = new WP_Query($args);
                     <div class="p-4 flex flex-col flex-grow justify-between">
                         <p class="text-[18px]  mb-2"><?php echo $title; ?></p>
                         <div class="self">
-                            <p class="text-sm text-gray-600 mb-2"><?php echo $date; ?></p>
+                            <p class="text-sm text-gray-600 mb-2"><?php echo $date_vid; ?></p>
                             <?php if (!empty($categories_names)) : ?>
                                 <p class="text-xs text-primary mt-2"><?php echo implode(" - ", $categories_names) ?></p>
                             <?php endif; ?>

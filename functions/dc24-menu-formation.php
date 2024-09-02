@@ -37,17 +37,20 @@ function get_first_child_by_menu_order($parent_id)
 
 function dc24_get_top_navigation_formations($parent_id = 0, $post_id = 0)
 {
+    // get current language
+ 
     $args = array(
         'post_type'      => 'formation',
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'post_parent'    => 0,
         'orderby'        => 'menu_order',
-        'order'          => 'ASC'
+        'order'          => 'ASC',
+        'suppress_filters' => false, 
     );
 
     $posts = get_posts($args);
-
+  
     if (empty($posts)) {
         return '';
     }

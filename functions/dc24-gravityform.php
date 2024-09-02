@@ -15,7 +15,7 @@ add_filter('gpi_inventory_limit_advanced_2_31', 'dc24_setlimit');
 function dc24_setlimit()
 {
     // get post id form the url
-    if(!isset($_GET['postid']) || !isset($_GET['sessionid'])) return;
+    if (!isset($_GET['postid']) || !isset($_GET['sessionid'])) return;
 
     $post_id = $_GET['postid'];
     $repeater_field = 'cours';
@@ -76,12 +76,55 @@ function dc24_get_booked_list_from_session_id($unique_id)
     return $entries;
 }
 
+add_filter('gform_pre_render_2', 'populate_field_with_value');
+// add_filter('gform_pre_validation_YOUR_FORM_ID', 'populate_field_with_value');
+// add_filter('gform_pre_submission_filter_YOUR_FORM_ID', 'populate_field_with_value');
+// add_filter('gform_admin_pre_render_YOUR_FORM_ID', 'populate_field_with_value');
+
+function populate_field_with_value($form)
+{
+
+    $post_id = $_GET['postid'];
+    $post_name = get_the_title($post_id);
+    $parent_title = get_the_title(wp_get_post_parent_id($post_id));
+
+    $repeater_field = 'cours';
+    $unique_id = $_GET['sessionid'];
+    // get the repeater item
+    $row = dc24_get_repeater_item_by_unique_id($post_id, $repeater_field, $unique_id);
+    $dates_grouped = group_dates_by_day($row['dates']);
+    $session = array();
+    foreach ($dates_grouped as $key => $sessions) {
+        $session[] = $key . ' ' . implode(" – ", array_map(function ($session) {
+            return $session['time_start'] . ' ' . $session['time_end'];
+        }, $sessions));
+    };
+    foreach ($form['fields'] as &$field) {
+        if ($field->id == 46) {
+            $field->defaultValue = implode("<br>", $session);
+        }
+        if ($field->id == 47) {
+            if (get_field('formation_title', $post_id)) {
+                $field->defaultValue = get_field('formation_title', $post_id);
+            } else {
+                $field->defaultValue = $parent_title . " – " . $post_name;
+            }
+        }
+        if ($field->id == 49) {
+            $field->defaultValue =  $row["info"]["place_tax"]->name;
+        }
+    }
+    return $form;
+}
+
+
 
 add_filter('gform_default_styles', function ($styles) {
     return '{"theme":"orbital","inputSize":"md","inputBorderRadius":"20","inputBorderColor":"#e3e3e3","inputBackgroundColor":"#e3e3e3","inputColor":"#000000","inputPrimaryColor":"#204ce5","labelFontSize":"16","labelColor":"#000000","descriptionFontSize":"16","descriptionColor":"#000000","buttonPrimaryBackgroundColor":"#0000df","buttonPrimaryColor":"#fff"}';
 });
 
-add_filter( 'gform_address_display_format', 'address_format', 10, 2 );
-function address_format( $format, $field ) {
-return 'zip_before_city';
+add_filter('gform_address_display_format', 'address_format', 10, 2);
+function address_format($format, $field)
+{
+    return 'zip_before_city';
 }

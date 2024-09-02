@@ -3,61 +3,61 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"palette":[
+			"palette": [
 				{
 					"name": "Primary",
 					"slug": "primary",
 					"color": "#000000"
-				  },
-				  {
+				},
+				{
 					"name": "Primary-hover",
 					"slug": "primary-hover",
 					"color": "#FF0000"
-				  },
-				  {
+				},
+				{
 					"name": "Secondary",
 					"slug": "secondary",
 					"color": "#FF0000"
-				  },
-				  {
+				},
+				{
 					"name": "Secondary-hover",
 					"slug": "secondary-hover",
 					"color": "#000000"
-				  },
-				  {
+				},
+				{
 					"name": "Gray dark",
 					"slug": "gray-dark",
 					"color": "#1c1c1c"
-				  },
-				  {
+				},
+				{
 					"name": "Gray text",
 					"slug": "gray-text",
 					"color": "#808080"
-				  },
-				  {
+				},
+				{
 					"name": "Gray warm",
 					"slug": "gray-warm",
 					"color": "#84380e"
-				  },
-				  {
+				},
+				{
 					"name": "Gray medium",
 					"slug": "gray-medium",
 					"color": "#8e8e8e"
-				  },
-				  {
+				},
+				{
 					"name": "Gray light",
 					"slug": "gray-light",
 					"color": "#f4f4f4"
-				  },
-				  {
+				},
+				{
 					"name": "White",
 					"slug": "white",
 					"color": "#ffffff"
-				  }
+				}
 			],
 			"defaultPalette": false,
-		   "defaultGradients": false,
-		   "defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
 			"gradients": []
 		},
 		"layout": {
@@ -65,8 +65,44 @@
 			"wideSize": "1640px"
 		},
 		"spacing": {
-			"units": [ "%", "px", "em", "rem", "vh", "vw" ],
-			"blockGap": "2rem"
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			],
+			"spacingScale": {
+				"steps": 0
+			},
+			"spacingSizes": [
+				{
+					"name": "xSmall",
+					"size": "20px",
+					"slug": "x-small"
+				},
+				{
+					"name": "Small",
+					"size": "clamp(20px, 4vw, 40px)",
+					"slug": "small"
+				},
+				{
+					"name": "Medium",
+					"size": "clamp(30px, 6vw, 60px)",
+					"slug": "medium"
+				},
+				{
+					"name": "Large",
+					"size": "clamp(40px, 8vw, 80px)",
+					"slug": "large"
+				},
+				{
+					"name": "xLarge",
+					"size": "clamp(50px, 10vw, 100px)",
+					"slug": "x-large"
+				}
+			]
 		},
 		"blocks": {
 			"core/site-title": {
@@ -76,6 +112,7 @@
 			}
 		},
 		"typography": {
+			"fluid": true,
 			"fontSizes": [
 				{
 					"slug": "small",
@@ -94,10 +131,13 @@
 				},
 				{
 					"slug": "x-large",
+					"fluid": {
+						"min": "60px",
+						"max": "100px"
+					},
 					"size": "100px",
 					"name": "X Large"
 				}
-	
 			],
 			"fontFamilies": [
 				{

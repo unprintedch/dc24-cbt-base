@@ -22,6 +22,10 @@ if (!empty($block['align'])) {
 }
 
 $is_admin = is_admin();
+$post_id = get_the_ID();
+$cta_text = get_field("cta_text");
+$cta_title = get_field("cta_lien")["title"];
+$cta_url = get_field("cta_lien")["url"];
 ?>
 
 <?php if ($is_admin) : ?>
@@ -40,6 +44,7 @@ $args = array(
     "facetwp"        => true
 );
 
+
 // The Query
 $query = new WP_Query($args);
 ?>
@@ -49,10 +54,11 @@ $query = new WP_Query($args);
             <?php echo facetwp_display('facet', 'search'); ?>
             <?php echo facetwp_display('facet', 'partner_type'); ?>
 
+
             <div class="wp-block-group py-4">
-                <p>Vous souhaitez devenir partenaire Winbiz ?<br> Faites-nous une demande.</p>
+                <?php echo $cta_text; ?>
                 <div class="wp-block-buttons  py-3">
-                    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo get_permalink(1055) ?>">remplir la demande</a></div>
+                    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo $cta_url ?>"><?php echo $cta_title ?></a></div>
                 </div>
             </div>
 
@@ -90,7 +96,7 @@ $query = new WP_Query($args);
             }
         } else {
             // No posts found
-            echo '<p class="text-gray-600">No videos found.</p>';
+            echo '<p class="text-gray-600">No partner found.</p>';
         }
 
         // Restore original Post Data

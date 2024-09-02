@@ -46,9 +46,9 @@ $is_admin = is_admin();
 endif; ?>
 
 <div <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?> z-10 top-0  sticky h-screen overflow-hidden">
-    <div class="absolute lg:bottom-0 bottom-20 left-[24px] m-auto right-0 z-10  pointer-events-auto xl:h-[60%] h-[500px]  ">
+    <div class="absolute bottom-0  left-[24px] m-auto right-0 z-10  pointer-events-auto xl:h-[60%] h-[500px]  ">
         <div class="container">
-            <h2 class="text-white uppercase text-[50px] lg:text-[74px] "><?php echo $title ?></h2>
+            <h1 class="text-white uppercase text-[40px] lg:text-[74px] "><?php echo $title ?></h1>
             <!-- If we need navigation buttons -->
             <div class="flex  relative w-[160px] items-center gap-3 pb-4 text-white mt-6">
                 <div class="dc24-swiper-button-prev flex items-center"><i class="fa-thin fa-chevron-left"></i></div>
@@ -72,7 +72,7 @@ endif; ?>
                 $image_caption = $slide["Caption"];
             ?>
                 <div class="swiper-slide h-screen bg-cover bg-black bg-no-repeat  bg-[center_top_20%]" style="background-image: url(<?php echo esc_url(wp_get_attachment_image_url($image_id, 'full')); ?>)">
-                    <div class="absolute  lg:right-64 right-6 bottom-44 text-white uppercase font-medium text-[14px] text-right border-t border-white pt-6 ">
+                    <div class="absolute  lg:right-64 right-6 bottom-8  md:bottom-44 text-white uppercase font-medium text-[12px] md:text-[14px] text-right border-t border-white pt-6 ">
                         <?php echo $image_caption; ?>
                     </div>
                 </div>

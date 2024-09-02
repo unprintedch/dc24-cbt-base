@@ -38,6 +38,7 @@ endif; ?>
 <div class="z-0 relative mt-0 h-[520px] overflow-hidden bg-cover flex items-end justify-center after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-black after:bg-opacity-30 after:z-10;" style="background-image: url('<?php echo get_the_post_thumbnail_url(null, 'full'); ?>');">    
     <div class="relative z-20 pb-3">
         <?php
+        var_dump($parent_id);
         $top_menu_items = dc24_get_top_navigation_formations($parent_id, $post_id);
         echo $top_menu_items;
         ?>
@@ -45,9 +46,7 @@ endif; ?>
 </div>
 <div class="flex justify-center">
     <?php
-   
     $sub_menu_items = dc24_get_sub_navigation_formations($parent_id, $post_id);
     echo $sub_menu_items;
-
     ?>
 </div>
