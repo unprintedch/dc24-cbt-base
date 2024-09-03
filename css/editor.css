@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.is-style-badge-title {
+    @apply border-2 border-black rounded-full aspect-square max-w-[160px] flex items-center justify-center m-auto leading-8 uppercase
+}

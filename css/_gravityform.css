@@ -1,0 +1,66 @@
+.gform_body {
+  label.gform-field-label.gform-field-label--type-sub {
+    @apply font-medium
+  }
+}
+
+h2.gform_title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.ec-theme--1309 {
+  @apply items-stretch;
+
+  .ec-card {
+    @apply hover:border-2 hover:border-primary w-[30%] max-h-[320px] flex flex-col justify-between;
+
+    &.ec-border-selected.ec-selected {
+      @apply border-2 border-primary;
+    }
+  }
+}
+
+.gform_description {
+  @apply mb-6;
+}
+
+#gform_fields_4 {
+  @apply border-2 border-primary rounded-lg p-4;
+
+  .gfield:not(.ec-enabled) {
+    @apply lg:px-44;
+  }
+}
+
+.gform_footer {
+  @apply lg:px-44;
+}
+
+.gform-theme--foundation .gform_footer {
+  @apply justify-center
+}
+
+.gform_wrapper a {
+  @apply text-primary underline;
+}
+
+.dc24-filters__partner {
+  h5 {
+    @apply p-0 m-0;
+  }
+}
+
+p.ec-paragraph {
+  @apply text-[16px]
+}
+
+.dc24-subtotal {
+  @apply flex justify-center items-center gap-3;
+  .gfield_label {
+    @apply mb-0;
+  }
+}
+
+.dc24-section-small .gsection_title{
+  @apply text-xl;
+}

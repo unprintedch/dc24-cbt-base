@@ -51,7 +51,7 @@ endif; ?>
 
 
 <div <?php echo esc_attr($anchor); ?> class="<?php echo $classes ?> dc24-navigation fixed alignfull top-0 h-36 px-6 inset-0">
-    <div class="flex justify-between items-baseline container pt-8">
+    <div class="flex justify-between md:baseline container pt-8">
         <?php wp_nav_menu(
             array(
                 'container_id'    => 'primary',
@@ -63,7 +63,7 @@ endif; ?>
         ); ?>
 
 
-        <div class="lg:hidden flex justify-start ">
+        <div class="lg:hidden flex justify-start pt-[3px]">
             <div class="burger-menu justify-items-start">
                 <span class="bg-white"></span>
                 <span class="bg-white"></span>
@@ -71,7 +71,7 @@ endif; ?>
             </div>
         </div>
         <div class="">
-            <div class="flex gap-6 items-start">
+            <div class="flex gap-2 md:gap-6 items-start">
                 <?php do_action('wpml_add_language_selector') ?>
                 <?php
                 $current_lang = apply_filters('wpml_current_language', NULL);
@@ -82,15 +82,15 @@ endif; ?>
                 <?php }
                 ?>
                 <div class="flex flex-col items-end">
-                    <a class="no-underline" href="<?php echo get_site_url() ?>">
+                    <a class="no-underline" href="<?php echo icl_get_home_url() ?>">
                         <?php if ($white_header) : ?>
-                            <img class="w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_black.svg" alt="">
+                            <img class="w-[50px] md:w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_black.svg" alt="">
                         <?php else : ?>
-                            <img class="w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_2.svg" alt="">
+                            <img class="w-[50px] md:w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_2.svg" alt="">
                         <?php endif; ?>
                     </a>
                     <?php if (is_front_page()) : ?>
-                        <img class="w-[68px] mt-10" src="<?php echo get_stylesheet_directory_uri() ?>/assets/badge.svg" alt="">
+                        <img class="w-[50px] md:w-[68px] mt-5 md:mt-10" src="<?php echo get_stylesheet_directory_uri() ?>/assets/badge.svg" alt="">
                     <?php endif; ?>
                 </div>
             </div>

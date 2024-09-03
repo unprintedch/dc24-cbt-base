@@ -76,7 +76,7 @@ function get_course_data($course_id,  $session_id)
     $return =  [
         'title' => "Formation avec $formateur –  $course_title ",
         'description' => $description,
-        'location' => $course[0]["info"]["place"],
+        'location' => $course[0]["info"]["place_tax"]->name,
         'dates' => $dates,
     ];
     // var_dump($return);
