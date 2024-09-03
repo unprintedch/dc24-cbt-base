@@ -1,22 +1,21 @@
 {
-    "name": "dc24/formation",
-    "title": "formation",
-    "description": "A block for displing the formation inscription.",
+    "name": "dc24/facet",
+    "title": "facet",
+    "description": "A block for displaying the facets.",
     "category": "formatting",
     "icon": "format-date",
-    
     "keywords": [
         "footer",
         "date",
-        "formation",
+        "facet",
         "dc24"
     ],
     "acf": {
         "mode" : "preview",
-        "renderTemplate": "block-formation.php"
+        "renderTemplate": "block-facet.php"
     },
     "supports": {
-        "align": false,
+        "align": true,
         "anchor": false,
         "customClassName": true,
         "jsx": false

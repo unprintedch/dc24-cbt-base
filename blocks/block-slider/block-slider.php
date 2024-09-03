@@ -45,26 +45,9 @@ $is_admin = is_admin();
     return;
 endif; ?>
 
-<div <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?> z-10 top-0  sticky h-screen overflow-hidden">
-    <div class="absolute bottom-0  left-[24px] m-auto right-0 z-10  pointer-events-auto xl:h-[60%] h-[500px]  ">
-        <div class="container">
-            <h1 class="text-white uppercase text-[40px] lg:text-[74px] "><?php echo $title ?></h1>
-            <!-- If we need navigation buttons -->
-            <div class="flex  relative w-[160px] items-center gap-3 pb-4 text-white mt-6">
-                <div class="dc24-swiper-button-prev flex items-center"><i class="fa-thin fa-chevron-left"></i></div>
-                <div class="dc24-swiper-pagination relative "></div>
-                <div class="dc24-swiper-button-next flex items-center"><i class="fa-thin fa-chevron-right"></i></div>
-            </div>
-            <p class="text-white  text-xl mb-6 w-[320px]"><?php echo $subtitle ?></p>
-            <a  href="<?php echo $link["url"] ?>" class="no-underline rounded-full bg-primary pt-[10px] pb-[6px] pr-4 pl-4 text-xs uppercase text-white shadow-lg font-semibold"><?php echo $link["title"] ?></a>
-        </div>
-    </div>
-    <div class="flex flex-col justify-center items-center absolute lg:bottom-12 bottom-6 w-full z-20 pointer-event-none">
-        <i class="fa-light fa-chevron-down text-white text-sm"></i>
-    </div>
-
+<div <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?> top-0 ">
     <!-- Slider main container -->
-    <div class="swiper  h-screen">
+    <div class="swiper ">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <?php foreach ($slides as $slide) :

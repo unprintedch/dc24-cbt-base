@@ -1,18 +1,18 @@
 {
-    "name": "dc24/partner",
-    "title": "partner",
-    "description": "A block for displaying the partners.",
+    "name": "dc24/facet-maps",
+    "title": "facet-maps",
+    "description": "A block for displaying the facet-maps.",
     "category": "formatting",
     "icon": "format-date",
     "keywords": [
         "grid",
         "facet",
-        "partner",
+        "facet-maps",
         "dc24"
     ],
     "acf": {
         "mode" : "auto",
-        "renderTemplate": "block-partner.php"
+        "renderTemplate": "block-facet-maps.php"
     },
     "supports": {
         "align": true,
