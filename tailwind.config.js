@@ -30,7 +30,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'display': ['Campton', 'sans-serif'],
+      'display': ['"Krona One"', 'sans-serif'],
     },
     container: {
       center: true,

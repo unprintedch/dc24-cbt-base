@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleOffCanvas() {
         // Toggle classes for off-canvas and overlay
         menuContainer.classList.toggle("overflow-visible");
-        offCanvas.classList.toggle("-left-[300px]");
-        offCanvas.classList.toggle("left-0");
+        offCanvas.classList.toggle("-right-[500px]");
+        offCanvas.classList.toggle("right-0");
         overlay.classList.toggle("hidden");
         body.classList.toggle("overflow-hidden");
 
