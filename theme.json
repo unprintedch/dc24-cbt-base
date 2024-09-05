@@ -157,6 +157,11 @@
 		{
 			"area": "footer",
 			"name": "footer"
+		},
+		{
+			"name": "offcanvas",
+			"title": "Off canvas",
+			"area": "header"
 		}
 	],
 	"version": 2

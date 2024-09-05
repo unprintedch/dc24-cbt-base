@@ -7,10 +7,7 @@ function dc24_enqueue_styles()
   wp_localize_script('front-scripts', 'ajax_object', array(
     'ajax_url' => admin_url('admin-ajax.php'),
   ));
-  wp_enqueue_script('popup-scripts', get_template_directory_uri() . '/scripts/dc24-popup.js', array('jquery'), null, true);
-  wp_localize_script('popup-scripts', 'popup_ajax', array(
-    'rest_url' => rest_url('wp/v2/pop-up')
-  ));
+
 }
 
 add_action('enqueue_block_editor_assets', 'dc24_enqueue_block_editor_styles');

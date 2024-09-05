@@ -22,21 +22,7 @@ if (!empty($block['align'])) {
 }
 
 $post_id = get_the_ID();
-$white_header = get_field("white_header", $post_id);
-$classes = " bg-gradient-to-t from-transparent via-black/50 to-black text-white";
-if ($white_header) {
-    $classes = "bg-white text-black";
-}
-
-
 $is_admin = is_admin();
-
-// $title = get_field("title", $block['id']);
-// $subtitle = get_field("subtitle", $block['id']);
-// $link = get_field("link", $block['id']);
-// $slides = get_field("slides", $block['id']);
-
-
 
 ?>
 
@@ -50,8 +36,8 @@ $is_admin = is_admin();
 endif; ?>
 
 
-<div <?php echo esc_attr($anchor); ?> class="<?php echo $classes ?> dc24-navigation fixed alignfull top-0 h-36 px-6 inset-0">
-    <div class="flex justify-between md:baseline container pt-8">
+<div id="menu-container" <?php echo esc_attr($anchor); ?> class="alignfull top-0  h-36 px-6 inset-0">
+    <div class="flex justify-between md:baseline container pt-8 ">
         <?php wp_nav_menu(
             array(
                 'container_id'    => 'primary',
@@ -61,39 +47,24 @@ endif; ?>
                 'fallback_cb'     => false
             )
         ); ?>
-
-
-        <div class="lg:hidden flex justify-start pt-[3px]">
-            <div class="burger-menu justify-items-start">
-                <span class="bg-white"></span>
-                <span class="bg-white"></span>
-                <span class="bg-white"></span>
+        <div class="lg:hidden flex justify-start  relative z-50" aria-expanded="false" aria-controls="offcanvas">
+            <div id="burger-icon" class="burger-menu justify-items-start">
+                <span class="bg-primary"></span>
+                <span class="bg-primary"></span>
+                <span class="bg-primary"></span>
             </div>
         </div>
-        <div class="">
-            <div class="flex gap-2 md:gap-6 items-start">
-                <?php do_action('wpml_add_language_selector') ?>
-                <?php
-                $current_lang = apply_filters('wpml_current_language', NULL);
-                if ($current_lang) { ?>
-                    <a href="https://my.winbiz.ch/<?php echo $current_lang ?> " class="bg-[hsla(0,0%,68.2%,0.6)] no-underline uppercase bg-opacity-40  rounded-[30px] pt-[10px] pb-[6px] pr-4 pl-4 text-xs text-white flex-none">
-                    <?php _e('Member Space', 'dc24'); ?>
-                    </a>
-                <?php }
-                ?>
-                <div class="flex flex-col items-end">
-                    <a class="no-underline" href="<?php echo icl_get_home_url() ?>">
-                        <?php if ($white_header) : ?>
-                            <img class="w-[50px] md:w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_black.svg" alt="">
-                        <?php else : ?>
-                            <img class="w-[50px] md:w-[100px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/WB_logo_2.svg" alt="">
-                        <?php endif; ?>
-                    </a>
-                    <?php if (is_front_page()) : ?>
-                        <img class="w-[50px] md:w-[68px] mt-5 md:mt-10" src="<?php echo get_stylesheet_directory_uri() ?>/assets/badge.svg" alt="">
-                    <?php endif; ?>
-                </div>
-            </div>
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-30 hidden"></div>
+        <div id="offcanvas" class="fixed z-40 w-[300px] h-full top-0 -left-[300px] bg-black flex  flex-col items-center justify-center p-8 pt-20">
+            <!-- <?php wp_nav_menu(
+                array(
+                    'container_id'    => 'offcanvas-menu',
+                    'container_class' => '',
+                    'menu_class'      => 'gap-16 items-baseline flex flex-col',
+                    'li_class'        => 'font-medium uppercase  uppercase text-[13px] text-white',
+                    'fallback_cb'     => false
+                )
+            ); ?> -->
         </div>
     </div>
 </div>
