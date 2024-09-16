@@ -61,8 +61,8 @@
 			"gradients": []
 		},
 		"layout": {
-			"contentSize": "1140px",
-			"wideSize": "1640px"
+			"contentSize": "900px",
+			"wideSize": "1800px"
 		},
 		"spacing": {
 			"units": [

@@ -65,12 +65,13 @@ function dc24_write_custom_heading_css($global_styles)
         "font-family" => $heading_styles['heading']['typography']['fontFamily'] ?? "inherit",
         "line-height" => $heading_styles['heading']['typography']['lineHeight'] ?? "inherit"
     ];
+    error_log(print_r($heading_styles["h4"], true));
 
     // Initialize an array to store the styles for each heading tag
+    // Check if the heading has specific styles defined, otherwise use default
     $headings = [];
 
     foreach (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as $heading_tag) {
-        // Check if the heading has specific styles defined, otherwise use default
         $headings[$heading_tag] = [
             "font-style" => $heading_styles[$heading_tag]["typography"]["fontStyle"] ?? $default_heading_styles["font-style"],
             "font-weight" => $heading_styles[$heading_tag]["typography"]["fontWeight"] ?? $default_heading_styles["font-weight"],
