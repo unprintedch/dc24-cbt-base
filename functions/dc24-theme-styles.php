@@ -50,31 +50,38 @@ function dc24_write_custom_colors_json($global_settings)
 
 function dc24_write_custom_heading_css($global_styles)
 {
-    // Generate the CSS content    
     // Define the path to the CSS file
     $file_path = get_template_directory() . '/css/heading.css';
 
-    // extract heading styles from global styles
+    // Extract heading styles from global styles
     $heading_styles = $global_styles['elements'];
+    // Log the global styles for debugging
+    
+    // Set default values for heading styles, checking the global styles for defaults
+    $default_heading_styles = [
+        "font-style" => $heading_styles['heading']['typography']['fontStyle'] ?? "normal",
+        "font-weight" => $heading_styles['heading']['typography']['fontWeight'] ?? 400,
+        "font-size" => $heading_styles['heading']['typography']['fontSize'] ?? "inherit",
+        "font-family" => $heading_styles['heading']['typography']['fontFamily'] ?? "inherit",
+        "line-height" => $heading_styles['heading']['typography']['lineHeight'] ?? "inherit"
+    ];
 
-    // array of heading styles
+    // Initialize an array to store the styles for each heading tag
+    $headings = [];
 
-    foreach ($heading_styles as $key => $value) {
-        if (in_array($key, ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])) {
-            $headings[$key] = [
-                "font-style" => $value["typography"]["fontStyle"] ?? "normal",
-                "font-weight" => $value["typography"]["fontWeight"] ?? 400,
-                "font-size" => $value["typography"]["fontSize"],
-            ];
-        }
+    foreach (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as $heading_tag) {
+        // Check if the heading has specific styles defined, otherwise use default
+        $headings[$heading_tag] = [
+            "font-style" => $heading_styles[$heading_tag]["typography"]["fontStyle"] ?? $default_heading_styles["font-style"],
+            "font-weight" => $heading_styles[$heading_tag]["typography"]["fontWeight"] ?? $default_heading_styles["font-weight"],
+            "font-size" => $heading_styles[$heading_tag]["typography"]["fontSize"] ?? $default_heading_styles["font-size"],
+            "font-family" => $heading_styles[$heading_tag]["typography"]["fontFamily"] ?? $default_heading_styles["font-family"],
+            "line-height" => $heading_styles[$heading_tag]["typography"]["lineHeight"] ?? $default_heading_styles["line-height"]
+        ];
     }
 
-    $css = dc24_generate_heading_css($headings);
-
-
-    // Generate the CSS content
-    // $css = json_encode($headings, JSON_PRETTY_PRINT);
-
+    // Generate the CSS from the heading styles
+    $css = dc24_generate_heading_css($headings, $default_heading_styles);
 
     // Write the CSS content to the file
     if (file_put_contents($file_path, $css) === false) {
@@ -82,15 +89,22 @@ function dc24_write_custom_heading_css($global_styles)
         return "Failed to write custom heading CSS to " . $file_path;
     } else {
         error_log('Custom heading CSS written to ' . $file_path);
-        return "success! Custom heading CSS written to " . $file_path;
+        return "Success! Custom heading CSS written to " . $file_path;
     }
 }
 
-
-function dc24_generate_heading_css($headings)
+function dc24_generate_heading_css($headings, $default_heading_styles)
 {
     $css = '';
 
+    // Add default heading styles to the CSS output
+    $css .= "h1, h2, h3, h4, h5, h6 {\n";
+    foreach ($default_heading_styles as $property => $value) {
+        $css .= "    {$property}: {$value};\n";
+    }
+    $css .= "}\n\n";
+
+    // Add specific heading styles (if any) to the CSS output
     foreach ($headings as $key => $styles) {
         $css .= "$key {\n";
         foreach ($styles as $property => $value) {

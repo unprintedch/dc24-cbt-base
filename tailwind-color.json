@@ -2,12 +2,12 @@
     {
         "name": "Primary",
         "slug": "primary",
-        "color": "#5bae70"
+        "color": "#000000"
     },
     {
         "name": "Primary-hover",
         "slug": "primary-hover",
-        "color": "#6af7a0"
+        "color": "#FF0000"
     },
     {
         "name": "Secondary",
