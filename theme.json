@@ -1,72 +1,88 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"palette":[
+			"palette": [
 				{
 					"name": "Primary",
 					"slug": "primary",
 					"color": "#000000"
-				  },
-				  {
+				},
+				{
 					"name": "Primary-hover",
 					"slug": "primary-hover",
 					"color": "#FF0000"
-				  },
-				  {
+				},
+				{
 					"name": "Secondary",
 					"slug": "secondary",
 					"color": "#FF0000"
-				  },
-				  {
+				},
+				{
 					"name": "Secondary-hover",
 					"slug": "secondary-hover",
 					"color": "#000000"
-				  },
-				  {
+				},
+				{
 					"name": "Gray dark",
 					"slug": "gray-dark",
 					"color": "#1c1c1c"
-				  },
-				  {
+				},
+				{
 					"name": "Gray text",
 					"slug": "gray-text",
 					"color": "#808080"
-				  },
-				  {
+				},
+				{
 					"name": "Gray warm",
 					"slug": "gray-warm",
 					"color": "#84380e"
-				  },
-				  {
+				},
+				{
 					"name": "Gray medium",
 					"slug": "gray-medium",
 					"color": "#8e8e8e"
-				  },
-				  {
+				},
+				{
 					"name": "Gray light",
 					"slug": "gray-light",
 					"color": "#f4f4f4"
-				  },
-				  {
+				},
+				{
 					"name": "White",
 					"slug": "white",
 					"color": "#ffffff"
-				  }
+				}
 			],
 			"defaultPalette": false,
-		   "defaultGradients": false,
-		   "defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
 			"gradients": []
 		},
 		"layout": {
-			"contentSize": "1140px",
-			"wideSize": "1640px"
+			"contentSize": "900px",
+			"wideSize": "1280px"
 		},
 		"spacing": {
-			"units": [ "%", "px", "em", "rem", "vh", "vw" ],
-			"blockGap": "2rem"
+			"customSpacingSize": true,
+			"spacingScale": {
+				"operator": "*",
+				"increment": 1.5,
+				"steps": 7,
+				"mediumStep": 1.5,
+				"unit": "rem"
+			},
+			"spacingSizes": [],
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw",
+				"%"
+			]
 		},
 		"blocks": {
 			"core/site-title": {
@@ -76,6 +92,7 @@
 			}
 		},
 		"typography": {
+			"fluid": true,
 			"fontSizes": [
 				{
 					"slug": "small",
@@ -94,33 +111,32 @@
 				},
 				{
 					"slug": "x-large",
+					"fluid": {
+						"min": "60px",
+						"max": "100px"
+					},
 					"size": "100px",
 					"name": "X Large"
 				}
-	
 			],
 			"fontFamilies": [
 				{
-                    "fontFamily": "MaisonNeueExtendedBookItalic",
-                    "name": "Maison Neue Extended Book Italic",
-                    "slug": "maison-neue-extended-book-italic"
-                },
-                {
-                    "fontFamily": "MaisonNeueExtendedBook",
-                    "name": "Maison Neue Extended Book",
-                    "slug": "maison-neue-extended-book"
-                },
-                {
-                    "fontFamily": "GlanceSlabBook",
-                    "name": "Glance Slab Book",
-                    "slug": "glance-slab-book"
-                }
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				}
 			]
 		},
 		"useRootPaddingAwareAlignments": true
 	},
 	"templateParts": [
-		
-	],
-	"version": 2
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	]
 }
