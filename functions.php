@@ -1,5 +1,3 @@
-
-
 <?php
 require_once get_template_directory() . '/functions/dc24-functions.php';
 require_once get_template_directory() . '/functions/dc24-acf.php';
@@ -46,3 +44,5 @@ add_action('init', 'register_theme_menus');
 // }
 
 // add_action('acf/init', 'my_acf_init');
+
+

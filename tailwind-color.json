@@ -2,22 +2,22 @@
     {
         "name": "Primary",
         "slug": "primary",
-        "color": "#000000"
+        "color": "#014d5b"
     },
     {
         "name": "Primary-hover",
         "slug": "primary-hover",
-        "color": "#FF0000"
+        "color": "#00d7fd"
     },
     {
         "name": "Secondary",
         "slug": "secondary",
-        "color": "#FF0000"
+        "color": "#7ccef4"
     },
     {
         "name": "Secondary-hover",
         "slug": "secondary-hover",
-        "color": "#000000"
+        "color": "#05bbf8"
     },
     {
         "name": "Gray dark",
@@ -48,5 +48,25 @@
         "name": "White",
         "slug": "white",
         "color": "#ffffff"
+    },
+    {
+        "color": "#ea5160",
+        "name": "Orange",
+        "slug": "custom-orange"
+    },
+    {
+        "color": "#e8e100",
+        "name": "Yellow",
+        "slug": "custom-yellow"
+    },
+    {
+        "color": "#2e2e86",
+        "name": "Blue intense",
+        "slug": "custom-blue-intense"
+    },
+    {
+        "color": "#fad6e8",
+        "name": "Pink",
+        "slug": "custom-pink"
     }
 ]
