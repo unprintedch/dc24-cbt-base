@@ -104,16 +104,6 @@ details {
     }
 }
 
-
-
-.dc24-wb-icon{
-    width: 0;
-    background: rgba(0, 0, 0, 0);
-    border-color: #0000df rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #0000df;
-    border-style: solid;
-    border-width: 15px 11px;
-}
-
 .burger-menu, .burger-menu-close, .burger-menu-mobile { 
     @apply w-7 h-5  flex flex-col justify-between bg-transparent gap-[2px] ;
     cursor: pointer;

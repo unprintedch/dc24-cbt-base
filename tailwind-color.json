@@ -2,7 +2,7 @@
     {
         "name": "Primary",
         "slug": "primary",
-        "color": "#F34E4E"
+        "color": "#000000"
     },
     {
         "name": "Primary-hover",
