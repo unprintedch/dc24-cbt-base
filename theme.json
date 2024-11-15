@@ -1,5 +1,6 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -144,6 +145,66 @@
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 					"name": "System Font",
 					"slug": "system-font"
+				},
+				{
+					"fontFamily": "Euclid Flex",
+					"slug": "euclid-flex",
+					"fontFace": [
+						{
+							"fontFamily": "Euclid Flex",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [
+								"file:./assets/fonts/euclid/EuclidFlex-Regular-WebS.woff2",
+								"file:./assets/fonts/euclid/EuclidFlex-Regular-WebS.woff"
+							]
+						},
+						{
+							"fontFamily": "Euclid Flex",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"src": [
+								"file:./assets/fonts/euclid/EuclidFlex-RegularItalic-WebS.woff2",
+								"file:./assets/fonts/euclid/EuclidFlex-RegularItalic-WebS.woff"
+							]
+						},
+						{
+							"fontFamily": "Euclid Flex",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"src": [
+								"file:./assets/fonts/euclid/EuclidFlex-Medium-WebS.woff2",
+								"file:./assets/fonts/euclid/EuclidFlex-Medium-WebS.woff"
+							]
+						},
+						{
+							"fontFamily": "Euclid Flex",
+							"fontWeight": "500",
+							"fontStyle": "italic",
+							"src": [
+								"file:./assets/fonts/euclid/EuclidFlex-MediumItalic-WebS.woff2",
+								"file:./assets/fonts/euclid/EuclidFlex-MediumItalic-WebS.woff"
+							]
+						},
+						{
+							"fontFamily": "Euclid Flex",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [
+								"file:./assets/fonts/euclid/EuclidFlex-Bold-WebS.woff2",
+								"file:./assets/fonts/euclid/EuclidFlex-Bold-WebS.woff"
+							]
+						},
+						{
+							"fontFamily": "Euclid Flex",
+							"fontWeight": "700",
+							"fontStyle": "italic",
+							"src": [
+								"file:./assets/fonts/euclid/EuclidFlex-BoldItalic-WebS.woff2",
+								"file:./assets/fonts/euclid/EuclidFlex-BoldItalic-WebS.woff"
+							]
+						}
+					]
 				}
 			]
 		},
@@ -158,6 +219,5 @@
 			"area": "footer",
 			"name": "footer"
 		}
-	],
-	"version": 2
+	]
 }

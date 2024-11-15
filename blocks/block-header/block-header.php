@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Text Block template.
+ * Header Block template.
  *
  * @param array $block The block settings and attributes.
  */
@@ -27,13 +27,11 @@ $is_admin = is_admin();
 ?>
 
 <?php if ($is_admin) : ?>
-    <div class="admin-view-only flex items-center justify-center bg-slate-200 p-12 hover:bg-slate-300 transition-all ">
-        <!-- Content to be shown only in admin -->
-        <h3>Custom header.</h3>
+    <div class="admin-view-only flex items-center justify-center bg-slate-200 p-12 hover:bg-slate-300 transition-all">
+        <h3>Custom header</h3>
     </div>
-<?php
-    return;
-endif; ?>
+    <?php return; ?>
+<?php endif; ?>
 
 
 <div id="menu-container" <?php echo esc_attr($anchor); ?> class="alignfull top-0  h-36 px-6 inset-0">

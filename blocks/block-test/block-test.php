@@ -22,6 +22,7 @@ if (!empty($block['align'])) {
 }
 ?>
 
-<div>
-<?php add_custom_classes_to_safelist(1132) ?>
+
+<div <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>">
+    <h1>Hello World</h1>
 </div>

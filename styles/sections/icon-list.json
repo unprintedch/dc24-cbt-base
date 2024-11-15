@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "icon-list-item",
+	"title": "Icon list item",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"text": "currentColor"
+				}
+			},
+			"core/group": {
+				"spacing": {
+					"blockGap": "20px"
+				}
+			}
+		}
+	}
+}
