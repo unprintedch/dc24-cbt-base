@@ -1,24 +1,23 @@
-=== dc24-cbt-base ===
-Contributors: dc
-Requires at least: 6.0
-Tested up to: 6.5.2
+== dc24-tailwind-clone ==
+
+Contributors: unprinted
+Requires at least: 6.7
+Tested up to: 6.7
 Requires PHP: 5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-== Description ==
-
-Base theme to include tailwind into block theme
 
 == Changelog ==
 
 = 1.0.0 =
 * Initial release
 
+
 == Copyright ==
 
-dc24-cbt-base WordPress Theme, (C) 2024 dc
-dc24-cbt-base is distributed under the terms of the GNU GPL.
+dc24-tailwind-clone WordPress Theme, (C) 2024 unprinted
+dc24-tailwind-clone is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -29,3 +28,7 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+
+dc24-tailwind-clone is based on dc24-cbt-base (https:/unprinted.ch), (C) dc, [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
+
