@@ -1,247 +1,225 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 3,
-	"settings": {
-		"appearanceTools": true,
-		"color": {
-			"palette": [
-				{
-					"name": "Primary",
-					"slug": "primary",
-					"color": "#000000"
-				},
-				{
-					"name": "Primary-hover",
-					"slug": "primary-hover",
-					"color": "#FF0000"
-				},
-				{
-					"name": "Secondary",
-					"slug": "secondary",
-					"color": "#FF0000"
-				},
-				{
-					"name": "Secondary-hover",
-					"slug": "secondary-hover",
-					"color": "#000000"
-				},
-				{
-					"name": "Gray dark",
-					"slug": "gray-dark",
-					"color": "#1c1c1c"
-				},
-				{
-					"name": "Gray text",
-					"slug": "gray-text",
-					"color": "#808080"
-				},
-				{
-					"name": "Gray warm",
-					"slug": "gray-warm",
-					"color": "#84380e"
-				},
-				{
-					"name": "Gray medium",
-					"slug": "gray-medium",
-					"color": "#8e8e8e"
-				},
-				{
-					"name": "Gray light",
-					"slug": "gray-light",
-					"color": "#f4f4f4"
-				},
-				{
-					"name": "White",
-					"slug": "white",
-					"color": "#ffffff"
-				}
-			],
-			"defaultPalette": false,
-			"defaultGradients": false,
-			"defaultDuotone": false,
-			"gradients": []
-		},
-		"layout": {
-			"contentSize": "900px",
-			"wideSize": "1800px"
-		},
-		"spacing": {
-			"customSpacingSize": true,
-			"spacingScale": {
-				"increment": 1.5,
-				"mediumStep": 1.5,
-				"operator": "*",
-				"steps": 7,
-				"unit": "rem"
-			},
-			"spacingSizes": [
-				{
-					"name": "2x plus petit",
-					"size": "0.44rem",
-					"slug": "20"
-				},
-				{
-					"name": "x plus petit",
-					"size": "clamp(0.75rem, 2vw, 1rem)",
-					"slug": "30"
-				},
-				{
-					"name": "Petite",
-					"size": "clamp(1rem, 3vw, 1.5rem)",
-					"slug": "40"
-				},
-				{
-					"name": "Moyenne",
-					"size": "clamp(1.5rem, 4vw, 2rem)",
-					"slug": "50"
-				},
-				{
-					"name": "Grande",
-					"size": "clamp(2rem, 5vw, 3rem)",
-					"slug": "60"
-				},
-				{
-					"name": "x plus grand",
-					"size": "clamp(3rem, 7vw, 4rem)",
-					"slug": "70"
-				},
-				{
-					"name": "2x plus grand",
-					"size": "clamp(4rem, 10vw, 5rem)",
-					"slug": "80"
-				}
-			],
-			"units": [
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw",
-				"%"
-			]
-		},
-		"blocks": {
-			"core/site-title": {
-				"typography": {
-					"textDecoration": false
-				}
-			}
-		},
-		"typography": {
-			"fluid": true,
-			"fontSizes": [
-				{
-					"slug": "small",
-					"size": "12px",
-					"name": "Small"
-				},
-				{
-					"slug": "medium",
-					"size": "18px",
-					"name": "Medium"
-				},
-				{
-					"slug": "large",
-					"size": "75px",
-					"name": "Large"
-				},
-				{
-					"slug": "x-large",
-					"fluid": {
-						"min": "60px",
-						"max": "100px"
-					},
-					"size": "100px",
-					"name": "X Large"
-				}
-			],
-			"fontFamilies": [
-				{
-					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
-					"name": "System Font",
-					"slug": "system-font"
-				},
-				{
-					"fontFamily": "Euclid Flex",
-					"slug": "euclid-flex",
-					"fontFace": [
-						{
-							"fontFamily": "Euclid Flex",
-							"fontWeight": "400",
-							"fontStyle": "normal",
-							"src": [
-								"file:./assets/fonts/euclid/EuclidFlex-Regular-WebS.woff2",
-								"file:./assets/fonts/euclid/EuclidFlex-Regular-WebS.woff"
-							]
-						},
-						{
-							"fontFamily": "Euclid Flex",
-							"fontWeight": "400",
-							"fontStyle": "italic",
-							"src": [
-								"file:./assets/fonts/euclid/EuclidFlex-RegularItalic-WebS.woff2",
-								"file:./assets/fonts/euclid/EuclidFlex-RegularItalic-WebS.woff"
-							]
-						},
-						{
-							"fontFamily": "Euclid Flex",
-							"fontWeight": "500",
-							"fontStyle": "normal",
-							"src": [
-								"file:./assets/fonts/euclid/EuclidFlex-Medium-WebS.woff2",
-								"file:./assets/fonts/euclid/EuclidFlex-Medium-WebS.woff"
-							]
-						},
-						{
-							"fontFamily": "Euclid Flex",
-							"fontWeight": "500",
-							"fontStyle": "italic",
-							"src": [
-								"file:./assets/fonts/euclid/EuclidFlex-MediumItalic-WebS.woff2",
-								"file:./assets/fonts/euclid/EuclidFlex-MediumItalic-WebS.woff"
-							]
-						},
-						{
-							"fontFamily": "Euclid Flex",
-							"fontWeight": "700",
-							"fontStyle": "normal",
-							"src": [
-								"file:./assets/fonts/euclid/EuclidFlex-Bold-WebS.woff2",
-								"file:./assets/fonts/euclid/EuclidFlex-Bold-WebS.woff"
-							]
-						},
-						{
-							"fontFamily": "Euclid Flex",
-							"fontWeight": "700",
-							"fontStyle": "italic",
-							"src": [
-								"file:./assets/fonts/euclid/EuclidFlex-BoldItalic-WebS.woff2",
-								"file:./assets/fonts/euclid/EuclidFlex-BoldItalic-WebS.woff"
-							]
-						}
-					]
-				}
-			]
-		},
-		"useRootPaddingAwareAlignments": true
-	},
-	"styles": {
-		"spacing": {
-			"blockGap": "1.2rem",
-			"padding": {
-				"left": "var:preset|spacing|50",
-				"right": "var:preset|spacing|50"
-			}
-		}
-	},
-	"templateParts": [
-		{
-			"area": "header",
-			"name": "header"
-		},
-		{
-			"area": "footer",
-			"name": "footer"
-		}
-	]
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "color": {
+            "palette": [
+                {
+                    "name": "Primary",
+                    "slug": "primary",
+                    "color": "#000000"
+                },
+                {
+                    "name": "Primary-hover",
+                    "slug": "primary-hover",
+                    "color": "#FF0000"
+                },
+                {
+                    "name": "Secondary",
+                    "slug": "secondary",
+                    "color": "#FF0000"
+                },
+                {
+                    "name": "Secondary-hover",
+                    "slug": "secondary-hover",
+                    "color": "#000000"
+                },
+                {
+                    "name": "Gray dark",
+                    "slug": "gray-dark",
+                    "color": "#1c1c1c"
+                },
+                {
+                    "name": "Gray text",
+                    "slug": "gray-text",
+                    "color": "#808080"
+                },
+                {
+                    "name": "Gray warm",
+                    "slug": "gray-warm",
+                    "color": "#84380e"
+                },
+                {
+                    "name": "Gray medium",
+                    "slug": "gray-medium",
+                    "color": "#8e8e8e"
+                },
+                {
+                    "name": "Gray light",
+                    "slug": "gray-light",
+                    "color": "#f4f4f4"
+                },
+                {
+                    "name": "White",
+                    "slug": "white",
+                    "color": "#ffffff"
+                }
+            ],
+            "defaultPalette": false,
+            "defaultGradients": false,
+            "defaultDuotone": false,
+            "gradients": []
+        },
+        "layout": {
+            "contentSize": "900px",
+            "wideSize": "1800px"
+        },
+        "spacing": {
+            "customSpacingSize": true,
+            "spacingScale": {
+                "increment": 1.5,
+                "mediumStep": 1.5,
+                "operator": "*",
+                "steps": 7,
+                "unit": "rem"
+            },
+            "spacingSizes": [
+                {
+                    "name": "2x plus petit",
+                    "size": "0.44rem",
+                    "slug": "20"
+                },
+                {
+                    "name": "x plus petit",
+                    "size": "clamp(0.75rem, 2vw, 1rem)",
+                    "slug": "30"
+                },
+                {
+                    "name": "Petite",
+                    "size": "clamp(1rem, 3vw, 1.5rem)",
+                    "slug": "40"
+                },
+                {
+                    "name": "Moyenne",
+                    "size": "clamp(1.5rem, 4vw, 2rem)",
+                    "slug": "50"
+                },
+                {
+                    "name": "Grande",
+                    "size": "clamp(2rem, 5vw, 3rem)",
+                    "slug": "60"
+                },
+                {
+                    "name": "x plus grand",
+                    "size": "clamp(3rem, 7vw, 4rem)",
+                    "slug": "70"
+                },
+                {
+                    "name": "2x plus grand",
+                    "size": "clamp(4rem, 10vw, 5rem)",
+                    "slug": "80"
+                }
+            ],
+            "units": [
+                "px",
+                "em",
+                "rem",
+                "vh",
+                "vw",
+                "%"
+            ]
+        },
+        "blocks": {
+            "core/site-title": {
+                "typography": {
+                    "textDecoration": false
+                }
+            }
+        },
+        "typography": {
+            "fluid": true,
+            "fontSizes": [
+                {
+                    "slug": "small",
+                    "size": "12px",
+                    "name": "Small"
+                },
+                {
+                    "slug": "medium",
+                    "size": "18px",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "75px",
+                    "name": "Large"
+                },
+                {
+                    "slug": "x-large",
+                    "fluid": {
+                        "min": "60px",
+                        "max": "100px"
+                    },
+                    "size": "100px",
+                    "name": "X Large"
+                }
+            ],
+            "fontFamilies": [
+                {
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+                    "name": "System Font",
+                    "slug": "system-font"
+                },
+                {
+                    "name": "Funnel Sans",
+                    "slug": "funnel-sans",
+                    "fontFamily": "\"Funnel Sans\"",
+                    "fontFace": [
+                        {
+                            "fontFamily": "\"Funnel Sans\"",
+                            "fontStyle": "italic",
+                            "fontWeight": "300 800",
+                            "src": [
+                                "file:./assets/fonts/funnel-sans/funnel-sans-300-800-italic.ttf"
+                            ]
+                        },
+                        {
+                            "fontFamily": "\"Funnel Sans\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "300 800",
+                            "src": [
+                                "file:./assets/fonts/funnel-sans/funnel-sans-300-800-normal.ttf"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Funnel Display",
+                    "slug": "funnel-display",
+                    "fontFamily": "\"Funnel Display\"",
+                    "fontFace": [
+                        {
+                            "fontFamily": "\"Funnel Display\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "300 800",
+                            "src": [
+                                "file:./assets/fonts/funnel-display/funnel-display-300-800-normal.ttf"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "useRootPaddingAwareAlignments": true
+    },
+    "styles": {
+        "spacing": {
+            "blockGap": "1.2rem",
+            "padding": {
+                "left": "var:preset|spacing|50",
+                "right": "var:preset|spacing|50"
+            }
+        }
+    },
+    "templateParts": [
+        {
+            "area": "header",
+            "name": "header"
+        },
+        {
+            "area": "footer",
+            "name": "footer"
+        }
+    ]
 }
