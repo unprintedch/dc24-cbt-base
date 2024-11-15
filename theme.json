@@ -1,5 +1,4 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -65,43 +64,58 @@
 			"wideSize": "1800px"
 		},
 		"spacing": {
+			"customSpacingSize": true,
+			"spacingScale": {
+				"increment": 1.5,
+				"mediumStep": 1.5,
+				"operator": "*",
+				"steps": 7,
+				"unit": "rem"
+			},
+			"spacingSizes": [
+				{
+					"name": "2x plus petit",
+					"size": "0.44rem",
+					"slug": "20"
+				},
+				{
+					"name": "x plus petit",
+					"size": "clamp(0.75rem, 2vw, 1rem)",
+					"slug": "30"
+				},
+				{
+					"name": "Petite",
+					"size": "clamp(1rem, 3vw, 1.5rem)",
+					"slug": "40"
+				},
+				{
+					"name": "Moyenne",
+					"size": "clamp(1.5rem, 4vw, 2rem)",
+					"slug": "50"
+				},
+				{
+					"name": "Grande",
+					"size": "clamp(2rem, 5vw, 3rem)",
+					"slug": "60"
+				},
+				{
+					"name": "x plus grand",
+					"size": "clamp(3rem, 7vw, 4rem)",
+					"slug": "70"
+				},
+				{
+					"name": "2x plus grand",
+					"size": "clamp(4rem, 10vw, 5rem)",
+					"slug": "80"
+				}
+			],
 			"units": [
-				"%",
 				"px",
 				"em",
 				"rem",
 				"vh",
-				"vw"
-			],
-			"spacingScale": {
-				"steps": 0
-			},
-			"spacingSizes": [
-				{
-					"name": "xSmall",
-					"size": "20px",
-					"slug": "x-small"
-				},
-				{
-					"name": "Small",
-					"size": "clamp(20px, 4vw, 40px)",
-					"slug": "small"
-				},
-				{
-					"name": "Medium",
-					"size": "clamp(30px, 6vw, 60px)",
-					"slug": "medium"
-				},
-				{
-					"name": "Large",
-					"size": "clamp(40px, 8vw, 80px)",
-					"slug": "large"
-				},
-				{
-					"name": "xLarge",
-					"size": "clamp(50px, 10vw, 100px)",
-					"slug": "x-large"
-				}
+				"vw",
+				"%"
 			]
 		},
 		"blocks": {
@@ -149,6 +163,15 @@
 		},
 		"useRootPaddingAwareAlignments": true
 	},
+	"styles": {
+		"spacing": {
+			"blockGap": "1.2rem",
+			"padding": {
+				"left": "var:preset|spacing|50",
+				"right": "var:preset|spacing|50"
+			}
+		}
+	},
 	"templateParts": [
 		{
 			"area": "header",
@@ -159,5 +182,6 @@
 			"name": "footer"
 		}
 	],
-	"version": 2
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
 }
