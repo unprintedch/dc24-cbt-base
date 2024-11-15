@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var overlay = document.getElementById("overlay");
     var body = document.body;
     var menuContainer =  document.getElementById("menu-container");
-    ;
 
     function toggleOffCanvas() {
         // Toggle classes for off-canvas and overlay
