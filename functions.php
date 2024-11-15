@@ -39,7 +39,7 @@ add_action('init', 'register_theme_menus');
 
 // function my_acf_init() {
     
-//   acf_update_setting('google_api_key', 'AIzaSyDT2r_nPHuX3M2Wdstpt0g3DajsyGFIZrw');
+//   acf_update_setting('google_api_key', '');
 // }
 
 // add_action('acf/init', 'my_acf_init');
