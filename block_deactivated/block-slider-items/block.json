@@ -1,0 +1,17 @@
+// {
+//     "name": "dc24/slider-items",
+//     "title": "Slider items",
+//     "description": "Un carousel avec plusieurs cartes",
+//     "category": "formatting",
+//     "icon": "format-image",
+//     "keywords": ["items", "carousel", "slider",  "dc23"],
+//     "script": "file:./slider.js",
+//     "acf": {
+//         "mode": "auto",
+//         "renderTemplate": "block-slider-items.php"
+//     },
+//     "supports": {
+//         "anchor": true,
+//         "jsx": true
+//     }
+// }

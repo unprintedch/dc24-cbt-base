@@ -1,0 +1,23 @@
+{
+    "name": "dc24/facet-maps",
+    "title": "facet-maps",
+    "description": "A block for displaying the facet-maps.",
+    "category": "formatting",
+    "icon": "format-date",
+    "keywords": [
+        "grid",
+        "facet",
+        "facet-maps",
+        "dc24"
+    ],
+    "acf": {
+        "mode" : "auto",
+        "renderTemplate": "block-facet-maps.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": false,
+        "customClassName": true,
+        "jsx": false
+    }
+}

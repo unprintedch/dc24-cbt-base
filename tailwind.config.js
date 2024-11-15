@@ -22,13 +22,16 @@ module.exports = {
   content: [
     './template-parts/*.php',
     '*.php',
-    "./blocks/**/*.php", "./css/*.css", 
-    "css/safelist.txt", 
+    "./blocks/**/*.php", "./css/*.css",
+    "css/safelist.txt",
     "./scripts/*.js",
-    "./tailwind.safelist.json", 
-    "./functions/*.php", 
+    "./tailwind.safelist.json",
+    "./functions/*.php",
   ],
   theme: {
+    fontFamily: {
+      'display': ['"Krona One"', 'sans-serif'],
+    },
     container: {
       center: true,
     },

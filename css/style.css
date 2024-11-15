@@ -4,10 +4,12 @@
 
 
 @import "heading.css";
+@import "heading_local.css";
 @import "facet.css";
 @import "_block-style.css";
 @import "_gravityform.css";
 @import "_wpml.css";
+@import "_offcanvas.css";
 
 html {
     scroll-behavior: smooth;
@@ -26,17 +28,24 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-
-
-
-
-.entry-content {
-    .wp-block-group {
-        @apply z-20 relative;
-    }
-
-   
+.dc24-swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    @apply relative h-[3px] rounded-[3px] bg-white/25
 }
+
+.dc24-swiper-pagination.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    @apply bg-white rounded-[3px];
+}
+
+.dc24-swiper-pagination-primary.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    @apply bg-primary rounded-[3px];
+}
+
+.dc24-swiper-pagination-primary.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    @apply relative h-[3px] rounded-[3px] bg-primary/25
+}
+
+
+
 
 
 .menu-item a {
@@ -52,15 +61,6 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-.menu-item.navigation-alt a {
-    @apply bg-primary pt-[10px] pb-[6px] pl-6 pr-6 rounded-full font-semibold relative text-white;
-
-    &:hover {
-        &:after {
-            @apply w-0;
-        }
-    }
-}
 
 
 
@@ -70,27 +70,8 @@ h1,h2,h3,h4,h5,h6 {
     ul {
         @apply list-disc list-inside
     }
-
 }
 
-.site-maps a {
-    @apply no-underline
-}
-
-details {
-    >.wp-block-group {
-        @apply bg-gray-light p-4 mt-0;
-    }
-
-    p,
-    li {
-        @apply  text-lg
-    }
-
-    strong {
-        @apply font-medium
-    }
-}
 
 .wp-block-separator {
     border-top: 1px solid;
@@ -101,37 +82,7 @@ details {
     }
 }
 
-.burger-menu, .burger-menu-close, .burger-menu-mobile { 
-    @apply w-7 h-5  flex flex-col justify-between bg-transparent gap-[2px] ;
-    cursor: pointer;
-    span{
-        @apply   block w-full h-[3px] ; 
-        transition: all .2s ease-in-out;
-        &:nth-child(2){
-			@apply mx-auto w-full;
-        }
-    }
-    &:hover{
-        span{
-          
-            &:last-of-type{
-                width: 100%;
-            }
-        }
-    }
-  
-    &.close-mode{
-        span{
-            &:nth-of-type(1){
-                @apply rotate-45 translate-y-[9px];
-            }
-            &:nth-of-type(2){
-                width: 0;
-            }
-            &:last-of-type{
-                @apply -rotate-45 -translate-y-[9px] w-full;
-            }
-        }
-    }
-}
+
+
+
 

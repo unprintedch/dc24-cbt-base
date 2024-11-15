@@ -18,7 +18,7 @@ function dc24_enqueue_styles()
   wp_enqueue_style('front-styles', get_template_directory_uri() . '/build/style.css');
   wp_enqueue_script('front-scripts', get_template_directory_uri() . '/build/app.js', array('jquery'), null, true);
   wp_localize_script('front-scripts', 'ajax_object', array(
-    'ajax_url' => admin_url('admin-ajax.php')
+    'ajax_url' => admin_url('admin-ajax.php'),
   ));
 
 }
@@ -26,10 +26,10 @@ function dc24_enqueue_styles()
 function dc24_enqueue_block_assets() {
   // Enqueue the editor stylesheet.
   wp_enqueue_style(
-      'dc24-editor-styles',                 // Handle for the stylesheet.
-      get_theme_file_uri('/build/style.css'), // Path to the stylesheet file.
-      array(),                                      // Define dependencies.
-      wp_get_theme()->get('Version')                // Version number for cache busting.
+    'dc24_enqueue_block_editor_styles',
+    get_theme_file_uri('/build/style.css'),
+    array(),
+    wp_get_theme()->get('Version')
   );
 }
 add_action('enqueue_block_assets', 'dc24_enqueue_block_assets');

@@ -1,4 +1,2 @@
-<?php 
-/**
- * Here comes the ACF related php code
- */
+<?php
+    // Here comes the facet related functione

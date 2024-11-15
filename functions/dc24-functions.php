@@ -1,6 +1,3 @@
-<?php 
-/** 
- * Here comes the basics functions for the theme
- */
+<?php
 
-
+    // Here comes the general helper functione

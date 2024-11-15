@@ -11,3 +11,4 @@ via-black/50
 to-transparent
 top-0
 lg:flex
+md:col-span-2

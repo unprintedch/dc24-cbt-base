@@ -50,13 +50,22 @@
 
 .facetwp-radio .facetwp-counter {
     display: none;
-  }
-  
+}
+
 .facetwp-facet-partner_type {
     .facetwp-radio {
         @apply flex items-start gap-2 bg-[left_top_5px] pl-6 pb-3;
     }
 }
+
 .facetwp-load-more {
     @apply rounded-full bg-primary text-white p-3 text-sm;
-}   
+}
+
+.dc-cluster-class {
+    @apply absolute flex justify-center items-center bg-primary border-2 border-white text-white shadow-md w-10 h-10 rounded-full font-display font-bold text-sm;
+}
+
+.facetwp-map-filtering {
+    @apply hidden;
+}

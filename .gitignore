@@ -3,5 +3,4 @@
 /.idea
 /.vscode
 /mix-manifest.json
-/assets
-
+.DS_Store

@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var offCanvas = document.getElementById("offcanvas");
     var overlay = document.getElementById("overlay");
     var body = document.body;
+    var menuContainer =  document.getElementById("menu-container");
 
     function toggleOffCanvas() {
         // Toggle classes for off-canvas and overlay
+        menuContainer.classList.toggle("overflow-visible");
         offCanvas.classList.toggle("-right-[500px]");
         offCanvas.classList.toggle("right-0");
         overlay.classList.toggle("hidden");
@@ -31,12 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Close offcanvas pressing Escape
-// document.addEventListener("keyup", function (event) {
-//     if (event.code === "Escape") {
-//         if (offcanvasMenu.classList.contains("open")) {
-//             offcanvasMenu.classList.remove("open");
-//             overlayOffcanvas.classList.remove("open");
-//             body.classList.remove("overflow-hidden");
-//         }
-//     }
-// });
+document.addEventListener("keyup", function (event) {
+    if (event.code === "Escape") {
+        if (offcanvasMenu.classList.contains("open")) {
+            offcanvasMenu.classList.remove("open");
+            overlayOffcanvas.classList.remove("open");
+            body.classList.remove("overflow-hidden");
+        }
+    }
+});

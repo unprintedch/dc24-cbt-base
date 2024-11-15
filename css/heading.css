@@ -1,50 +1,50 @@
 h1, h2, h3, h4, h5, h6 {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: inherit;
-    font-family: var(--wp--preset--font-family--euclid-flex);
+    font-family: var(--wp--preset--font-family--inter);
     line-height: 1;
 }
 
 h1 {
     font-style: normal;
-    font-weight: 700;
-    font-size: 80px;
-    font-family: var(--wp--preset--font-family--Euclid);
+    font-weight: 600;
+    font-size: inherit;
+    font-family: var(--wp--preset--font-family--inter);
     line-height: 1;
 }
 h2 {
     font-style: normal;
-    font-weight: 700;
-    font-size: var(--wp--preset--font-size--large);
-    font-family: var(--wp--preset--font-family--euclid-flex);
+    font-weight: 600;
+    font-size: 40px;
+    font-family: var(--wp--preset--font-family--inter);
     line-height: 1;
 }
 h3 {
     font-style: normal;
-    font-weight: 700;
-    font-size: var(--wp--preset--font-size--medium);
-    font-family: var(--wp--preset--font-family--euclid-flex);
+    font-weight: 600;
+    font-size: inherit;
+    font-family: var(--wp--preset--font-family--inter);
     line-height: 1;
 }
 h4 {
     font-style: normal;
-    font-weight: 700;
-    font-size: var(--wp--preset--font-size--small);
-    font-family: var(--wp--preset--font-family--euclid-flex);
-    line-height: 1;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: var(--wp--preset--font-family--inter);
+    line-height: 1.3;
 }
 h5 {
     font-style: normal;
-    font-weight: 400;
-    font-size: inherit;
-    font-family: var(--wp--preset--font-family--euclid-flex);
-    line-height: 1;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: var(--wp--preset--font-family--inter);
+    line-height: 1.3;
 }
 h6 {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: inherit;
-    font-family: var(--wp--preset--font-family--euclid-flex);
+    font-family: var(--wp--preset--font-family--inter);
     line-height: 1;
 }
