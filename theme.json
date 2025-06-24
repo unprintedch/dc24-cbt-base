@@ -8,7 +8,7 @@
                 {
                     "name": "Primary",
                     "slug": "primary",
-                    "color": "#000000"
+                    "color": "#CF2E2E"
                 },
                 {
                     "name": "Primary-hover",
@@ -128,76 +128,122 @@
             }
         },
         "typography": {
-            "fluid": true,
             "fontSizes": [
                 {
                     "slug": "small",
-                    "size": "12px",
+                    "size": "0.875rem",
                     "name": "Small"
                 },
                 {
                     "slug": "medium",
-                    "size": "18px",
+                    "size": "1rem",
                     "name": "Medium"
                 },
                 {
                     "slug": "large",
-                    "size": "75px",
+                    "size": "1.125rem",
                     "name": "Large"
                 },
                 {
                     "slug": "x-large",
-                    "fluid": {
-                        "min": "60px",
-                        "max": "100px"
-                    },
-                    "size": "100px",
+                    "size": "1.25rem",
                     "name": "X Large"
+                },
+                {
+                    "slug": "xx-large",
+                    "size": "1.5rem",
+                    "name": "XX Large"
+                },
+                {
+                    "slug": "xxx-large",
+                    "size": "2rem",
+                    "name": "XXX Large"
+                },
+                {
+                    "slug": "huge",
+                    "size": "2.5rem",
+                    "name": "Huge"
                 }
             ],
             "fontFamilies": [
                 {
-                    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
-                    "name": "System Font",
-                    "slug": "system-font"
-                },
-                {
-                    "name": "Funnel Sans",
-                    "slug": "funnel-sans",
-                    "fontFamily": "\"Funnel Sans\"",
+                    "name": "Display",
+                    "slug": "display",
+                    "fontFamily": "\"Circular\"",
                     "fontFace": [
                         {
-                            "fontFamily": "\"Funnel Sans\"",
-                            "fontStyle": "italic",
-                            "fontWeight": "300 800",
+                            "fontFamily": "\"Circular\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "fontDisplay": "swap",
                             "src": [
-                                "file:./assets/fonts/funnel-sans/funnel-sans-300-800-italic.ttf"
+                                "file:./assets/fonts/circular/lineto-circular-book.woff2",
+                                "file:./assets/fonts/circular/lineto-circular-book.woff",
+                                "file:./assets/fonts/circular/lineto-circular-book.eot"
                             ]
                         },
                         {
-                            "fontFamily": "\"Funnel Sans\"",
+                            "fontFamily": "\"Circular\"",
                             "fontStyle": "normal",
-                            "fontWeight": "300 800",
+                            "fontWeight": "500",
+                            "fontDisplay": "swap",
                             "src": [
-                                "file:./assets/fonts/funnel-sans/funnel-sans-300-800-normal.ttf"
+                                "file:./assets/fonts/circular/lineto-circular-medium.woff2",
+                                "file:./assets/fonts/circular/lineto-circular-medium.woff",
+                                "file:./assets/fonts/circular/lineto-circular-medium.eot"
+                            ]
+                        },
+                        {
+                            "fontFamily": "\"Circular\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "fontDisplay": "swap",
+                            "src": [
+                                "file:./assets/fonts/circular/lineto-circular-bold.woff2",
+                                "file:./assets/fonts/circular/lineto-circular-bold.woff",
+                                "file:./assets/fonts/circular/lineto-circular-bold.eot"
                             ]
                         }
                     ]
+                }
+            ],
+            "fontWeights": [
+                {
+                    "slug": "400",
+                    "name": "Regular",
+                    "weight": "400"
                 },
                 {
-                    "name": "Funnel Display",
-                    "slug": "funnel-display",
-                    "fontFamily": "\"Funnel Display\"",
-                    "fontFace": [
-                        {
-                            "fontFamily": "\"Funnel Display\"",
-                            "fontStyle": "normal",
-                            "fontWeight": "300 800",
-                            "src": [
-                                "file:./assets/fonts/funnel-display/funnel-display-300-800-normal.ttf"
-                            ]
-                        }
-                    ]
+                    "slug": "500",
+                    "name": "Medium",
+                    "weight": "500"
+                },
+                {
+                    "slug": "600",
+                    "name": "Semi Bold",
+                    "weight": "600"
+                },
+                {
+                    "slug": "700",
+                    "name": "Bold",
+                    "weight": "700"
+                }
+            ],
+            "lineHeights": [
+                {
+                    "slug": "tight",
+                    "name": "Tight",
+                    "size": "1.2"
+                },
+                {
+                    "slug": "normal",
+                    "name": "Normal",
+                    "size": "1.6"
+                },
+                {
+                    "slug": "relaxed",
+                    "name": "Relaxed",
+                    "size": "1.8"
                 }
             ]
         },
@@ -209,6 +255,97 @@
             "padding": {
                 "left": "var:preset|spacing|50",
                 "right": "var:preset|spacing|50"
+            }
+        },
+        "typography": {
+            "fontFamily": "var:preset|font-family|display",
+            "fontWeight": "var:preset|font-weight|400",
+            "lineHeight": "var:preset|line-height|normal"
+        },
+        "elements": {
+            "h1": {
+                "color": {
+                    "text": "var(--wp--preset--color--primary)"
+                },
+                "typography": {
+                    "fontFamily": "var:preset|font-family|display",
+                    "fontSize": "4rem",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                },
+                "spacing": {
+                    "margin": {
+                        "bottom": "1rem"
+                    }
+                }
+            },
+            "h2": {
+                "color": {
+                    "text": "var(--wp--preset--color--gray-dark)"
+                },
+                "typography": {
+                    "fontFamily": "var:preset|font-family|display",
+                    "fontSize": "2rem",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                },
+                "spacing": {
+                    "margin": {
+                        "bottom": "1rem"
+                    }
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontFamily": "var:preset|font-family|display",
+                    "fontSize": "1.5rem",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                },
+                "spacing": {
+                    "margin": {
+                        "bottom": "1rem"
+                    }
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontFamily": "var:preset|font-family|display",
+                    "fontSize": "1.25rem",
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
+                },
+                "spacing": {
+                    "margin": {
+                        "bottom": "1rem"
+                    }
+                }
+            },
+            "h5": {
+                "typography": {
+                    "fontFamily": "var:preset|font-family|display",
+                    "fontSize": "1.125rem",
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
+                },
+                "spacing": {
+                    "margin": {
+                        "bottom": "1rem"
+                    }
+                }
+            },
+            "h6": {
+                "typography": {
+                    "fontFamily": "var:preset|font-family|display",
+                    "fontSize": "1rem",
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
+                },
+                "spacing": {
+                    "margin": {
+                        "bottom": "1rem"
+                    }
+                }
             }
         }
     },

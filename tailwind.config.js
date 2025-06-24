@@ -1,21 +1,28 @@
 const fs = require('fs');
 const path = require('path');
 
-// Path to the generated JSON file
-const colorsPath = path.resolve(__dirname, 'tailwind-color.json');
+// Read theme.json to get colors and fonts
+const themeJsonPath = path.resolve(__dirname, 'theme.json');
+let customColors = {};
+let themeFonts = {};
 
-// Read and parse the JSON file
-let customColorsArray = [];
-if (fs.existsSync(colorsPath)) {
-  customColorsArray = JSON.parse(fs.readFileSync(colorsPath, 'utf8'));
+if (fs.existsSync(themeJsonPath)) {
+  const themeJson = JSON.parse(fs.readFileSync(themeJsonPath, 'utf8'));
+  
+  // Extract colors from theme.json
+  if (themeJson.settings?.color?.palette) {
+    themeJson.settings.color.palette.forEach(color => {
+      customColors[color.slug] = color.color;
+    });
+  }
+  
+  // Extract fonts from theme.json
+  if (themeJson.settings?.typography?.fontFamilies) {
+    themeJson.settings.typography.fontFamilies.forEach(font => {
+      themeFonts[font.slug] = font.fontFamily.split(',').map(f => f.trim().replace(/"/g, ''));
+    });
+  }
 }
-
-// Transform the JSON data into an object with slug as key and color as value
-const customColors = customColorsArray.reduce((acc, color) => {
-  acc[color.slug] = color.color;
-  return acc;
-}, {});
-
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -31,6 +38,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'display': ['"Krona One"', 'sans-serif'],
+      ...themeFonts, // Utilise les polices de theme.json
     },
     container: {
       center: true,
@@ -43,7 +51,7 @@ module.exports = {
       '2xl': '1640px',
     },
     extend: {
-      colors: customColors,
+      colors: customColors, // Utilise les couleurs de theme.json
     },
   },
   plugins: [],

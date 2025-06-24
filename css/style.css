@@ -1,15 +1,39 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+/* Import Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
+/* Import fonts and typography AFTER Tailwind */
+@import 'fonts.css';
 
 @import "heading.css";
-@import "heading_local.css";
 @import "facet.css";
 @import "_block-style.css";
 @import "_gravityform.css";
 @import "_wpml.css";
 @import "_offcanvas.css";
+
+
+@layer utilities {
+    .alignfull {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+    }
+    .alignwide {
+      max-width: var(--wp--style--global--wide-size);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .alignnone {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+
+  }
+  
+
 
 html {
     scroll-behavior: smooth;
@@ -22,11 +46,6 @@ html {
 h1,h2,h3,h4,h5,h6,p, a , summary, li, strong, span, div, label, button, input, select, textarea {
     @apply antialiased ;
 }
-
-h1,h2,h3,h4,h5,h6 {
-    @apply mb-2 mt-6; 
-}
-
 
 .dc24-swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
     @apply relative h-[3px] rounded-[3px] bg-white/25
@@ -44,10 +63,6 @@ h1,h2,h3,h4,h5,h6 {
     @apply relative h-[3px] rounded-[3px] bg-primary/25
 }
 
-
-
-
-
 .menu-item a {
     @apply after:content-[""] relative no-underline;
     &:after {
@@ -61,17 +76,11 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-
-
-
-
-
 .entry-content {
     ul {
         @apply list-disc list-inside
     }
 }
-
 
 .wp-block-separator {
     border-top: 1px solid;

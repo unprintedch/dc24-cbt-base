@@ -12,15 +12,23 @@ require_once get_template_directory() . '/functions/dc24-safelist-update.php';
 // Observe les couleurs et les styles des heading pour les copier dans tailwind
 require_once get_template_directory() . '/functions/dc24-theme-styles.php';
 
+// Plugin specific functions - Chargement conditionnel
+if ( class_exists( 'ACF' ) ) {
+    require_once get_template_directory() . '/functions/dc24-acf.php';
+}
 
-//Plugin specific functions
-// require_once get_template_directory() . '/functions/dc24-acf.php';
-// require_once get_template_directory() . '/functions/dc24-facet.php';
-// require_once get_template_directory() . '/functions/dc24-gravityform.php';
-// require_once get_template_directory() . '/functions/dc24-acf.php';
+if ( class_exists( 'FacetWP' ) ) {
+    require_once get_template_directory() . '/functions/dc24-facet.php';
+}
 
-// Au cas ou on a besoin de WPML
-// require_once get_template_directory() . '/functions/dc24-wpml.php';
+if ( class_exists( 'GFCommon' ) ) {
+    require_once get_template_directory() . '/functions/dc24-gravityform.php';
+}
+
+if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
+    require_once get_template_directory() . '/functions/dc24-wpml.php';
+}
+
 // Si on utilise le menu "hybride"
 // require_once get_template_directory() . '/functions/dc24-menu-walker.php';
 
@@ -43,5 +51,15 @@ add_action('init', 'register_theme_menus');
 // }
 
 // add_action('acf/init', 'my_acf_init');
+
+// Contrôle de l'édition FSE selon l'environnement
+function dc24_control_fse_editing() {
+    // Désactiver l'édition FSE en production pour les utilisateurs non-administrateurs
+    if ( ! wp_doing_ajax() && ! is_admin() && ! current_user_can( 'administrator' ) ) {
+        // Vous pouvez ajouter une logique ici pour désactiver certaines fonctionnalités FSE
+        // Par exemple, masquer le bouton "Modifier le site" pour les utilisateurs non-admin
+    }
+}
+add_action( 'init', 'dc24_control_fse_editing' );
 
 
