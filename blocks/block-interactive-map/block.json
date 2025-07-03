@@ -1,0 +1,25 @@
+{
+    "name": "dc24/interactive-map",
+    "title": "Plan Interactif",
+    "description": "Un bloc pour afficher un plan interactif SVG avec des zones cliquables.",
+    "category": "design",
+    "icon": "location",
+    "keywords": [
+        "plan",
+        "carte",
+        "interactif",
+        "svg",
+        "map",
+        "dc24"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "block-interactive-map.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "customClassName": true,
+        "jsx": false
+    }
+} 

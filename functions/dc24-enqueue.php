@@ -40,11 +40,12 @@ function dc24_enqueue_conditional_block_assets() {
   // Charger Swiper seulement si des blocs slider sont présents
   if ( has_block( 'dc24/slider', $post ) || 
        has_block( 'dc24/slider-items', $post ) || 
+       has_block( 'dc24/slider-news', $post ) || 
        has_block( 'dc24/slider-video', $post ) ||
        strpos( $content, 'dc24/slider' ) !== false ) {
     
-    wp_enqueue_style( 'swiper-css', get_template_directory_uri() . '/node_modules/swiper/swiper-bundle.min.css' );
-    wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/node_modules/swiper/swiper-bundle.min.js', array(), null, true );
+    wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' );
+    wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true );
   }
   
   // Ajouter d'autres conditions pour d'autres blocs si nécessaire

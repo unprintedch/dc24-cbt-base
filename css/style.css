@@ -13,34 +13,85 @@
 @import "_wpml.css";
 @import "_offcanvas.css";
 
+/* Variables CSS pour Swiper */
+:root {
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-color: var(--wp--preset--color--primary);
+    --swiper-theme-color: var(--wp--preset--color--primary);
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-border-radius: 50%;
+    
+    /* Variables pour la pagination (bullets) */
+    --swiper-pagination-color: var(--wp--preset--color--primary);
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-border-radius: 50%;
+    --swiper-pagination-bullet-inactive-color: #ccc;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+}
 
-@layer utilities {
-    .alignfull {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
-    }
-    .alignwide {
-      max-width: var(--wp--style--global--wide-size);
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .alignnone {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  
+main{
+    margin-block-start: 0;
+}
 
-  }
-  
+/* Styles pour le front-end uniquement */
+.front-end-only .alignfull {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
 
+.front-end-only .alignwide {
+    max-width: var(--wp--style--global--wide-size);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.front-end-only .alignnone {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
+/* Décalage pour la barre d'administration WordPress */
+.logged-in .header-sticky {
+    top: 32px !important;
+}
+
+/* Décalage du contenu pour le header sticky */
+body {
+    padding-top: 0px;
+    transition: padding-top 0.3s ease;
+}
+
 .logged-in .dc24-navigation{
     @apply pt-[32px];
+}
+
+/* Header scroll animations */
+.header-scrolled {
+    @apply bg-primary backdrop-blur-sm shadow-lg max-h-20 ;
+}
+
+.logo-container-scrolled {
+    @apply h-[140px] w-[140px] -top-[50px];
+    transform: scale(0.75);
+}
+
+.logo-scrolled {
+    @apply  mb-4;
+}
+
+.navigation-scrolled {
+    @apply text-lg;
 }
 
 h1,h2,h3,h4,h5,h6,p, a , summary, li, strong, span, div, label, button, input, select, textarea {
@@ -61,19 +112,6 @@ h1,h2,h3,h4,h5,h6,p, a , summary, li, strong, span, div, label, button, input, s
 
 .dc24-swiper-pagination-primary.swiper-pagination-progressbar.swiper-pagination-horizontal {
     @apply relative h-[3px] rounded-[3px] bg-primary/25
-}
-
-.menu-item a {
-    @apply after:content-[""] relative no-underline;
-    &:after {
-        @apply bg-white h-[1px] w-0 absolute -bottom-1 left-0 transition-all;
-    }
-
-    &:hover {
-        &:after {
-            @apply w-full;
-        }
-    }
 }
 
 .entry-content {

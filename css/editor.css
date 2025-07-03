@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Override de la règle WordPress qui cause l'overflow */
+:where(.wp-site-blocks) > * {
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+}
+
+/* Reset des styles d'alignement dans l'éditeur */
+.alignfull {
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.alignwide {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.alignnone {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Correction de l'overflow dans l'éditeur */
+.wp-block {
+    max-width: 100% !important;
+    overflow: visible !important;
+}
+
 .is-style-badge-title {
     @apply border-2 border-black rounded-full aspect-square max-w-[160px] flex items-center justify-center m-auto leading-8 uppercase
 }

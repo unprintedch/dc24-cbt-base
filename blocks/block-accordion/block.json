@@ -1,0 +1,46 @@
+{
+    "name": "dc24/accordion",
+    "title": "Accordion",
+    "description": "A custom accordion block for displaying collapsible content sections.",
+    "category": "design",
+    "icon": "editor-ul",
+    "keywords": [
+        "accordion",
+        "collapsible",
+        "toggle",
+        "faq",
+        "dc24"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "block-accordion.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "customClassName": true,
+        "jsx": false,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "attributes": {
+        "accordionTitle": {
+            "type": "string",
+            "default": ""
+        },
+        "allowMultiple": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_help": "This is a preview of the accordion block."
+            }
+        }
+    }
+}

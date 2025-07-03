@@ -1,7 +1,5 @@
-
-
 .burger-menu, .burger-menu-close, .burger-menu-mobile { 
-    @apply w-12 h-8  flex flex-col justify-between bg-transparent gap-[2px] ;
+    @apply w-6 h-4  flex flex-col justify-between bg-transparent gap-[1px] ;
     cursor: pointer;
     span{
         @apply   block w-full h-[2px] ; 
@@ -12,7 +10,6 @@
     }
     &:hover{
         span{
-          
             &:last-of-type{
                 width: 100%;
             }
@@ -22,14 +19,52 @@
     &.close-mode{
         span{
             &:nth-of-type(1){
-                @apply rotate-45 translate-y-[14px];
+                @apply rotate-45 translate-y-[7px];
             }
             &:nth-of-type(2){
                 width: 0;
             }
             &:last-of-type{
-                @apply -rotate-45 -translate-y-[14px] w-full;
+                @apply -rotate-45 -translate-y-[7px] w-full;
             }
         }
     }
+}
+
+/* Styles pour l'accordéon dans l'off-canvas */
+#offcanvas-menu {
+    @apply w-full;
+}
+
+#offcanvas-menu .menu-item {
+    @apply relative text-xl font-bold text-primary;
+}
+
+#offcanvas-menu .menu-item-has-children {
+    @apply relative ;
+}
+
+#offcanvas-menu .menu-item-has-children > a {
+    @apply flex justify-between items-center;
+}
+
+#offcanvas-menu .menu-item-has-children > a::after {
+    content: '+';
+    @apply text-2xl font-light transition-transform duration-300   flex items-center justify-center pb-[1px];
+}
+
+#offcanvas-menu .menu-item-has-children.accordion-open > a::after {
+    @apply rotate-[225deg];
+}
+
+#offcanvas-menu .sub-menu {
+    @apply  max-h-0 overflow-hidden transition-all duration-300 ;
+}
+
+#offcanvas-menu .sub-menu.accordion-open {
+    @apply block max-h-[1000px] transition-all duration-300 mt-6;
+}
+
+#offcanvas-menu .sub-menu .menu-item {
+    @apply pl-4 font-normal;
 }

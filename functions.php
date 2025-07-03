@@ -30,7 +30,7 @@ if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
 }
 
 // Si on utilise le menu "hybride"
-// require_once get_template_directory() . '/functions/dc24-menu-walker.php';
+require_once get_template_directory() . '/functions/dc24-menu-walker.php';
 
 
 
@@ -38,6 +38,7 @@ function register_theme_menus()
 {
   register_nav_menus(array(
     'primary' => __('Primary Menu'),
+    'offcanvas' => __('Offcanvas Menu'),
     'footer' => __('Footer Menu'),
   ));
 }

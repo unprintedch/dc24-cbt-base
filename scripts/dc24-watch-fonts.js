@@ -21,14 +21,14 @@ function generateFonts() {
         return value;
     }
 
-    // Fonction pour obtenir la couleur d'un heading depuis styles.elements
-    function getElementColor(elements, heading) {
+    // Fonction pour obtenir la couleur d'un élément depuis styles.elements
+    function getElementColor(elements, element) {
         if (
-            elements[heading] &&
-            elements[heading].color &&
-            elements[heading].color.text
+            elements[element] &&
+            elements[element].color &&
+            elements[element].color.text
         ) {
-            return convertWordPressVar(elements[heading].color.text);
+            return convertWordPressVar(elements[element].color.text);
         }
         return '#000000';
     }
@@ -38,15 +38,15 @@ function generateFonts() {
     css += '   TYPOGRAPHY FROM THEME.JSON ELEMENTS\n';
     css += '   =================================== */\n\n';
 
-    // Styles pour chaque heading
-    ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].forEach(heading => {
-        if (elements[heading] && elements[heading].typography) {
-            const typography = elements[heading].typography;
-            const spacing = elements[heading].spacing || {};
-            const color = getElementColor(elements, heading);
+    // Styles pour chaque heading et paragraphe
+    ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'].forEach(element => {
+        if (elements[element] && elements[element].typography) {
+            const typography = elements[element].typography;
+            const spacing = elements[element].spacing || {};
+            const color = getElementColor(elements, element);
 
-            css += `/* ${heading} */\n`;
-            css += `${heading} {\n`;
+            css += `/* ${element} */\n`;
+            css += `${element} {\n`;
 
             // Typography
             if (typography.fontFamily) {
@@ -63,8 +63,13 @@ function generateFonts() {
             }
 
             // Spacing
-            if (spacing.margin && spacing.margin.bottom) {
-                css += `    margin-bottom: ${spacing.margin.bottom};\n`;
+            if (spacing.margin) {
+                if (spacing.margin.top) {
+                    css += `    margin-top: ${spacing.margin.top};\n`;
+                }
+                if (spacing.margin.bottom) {
+                    css += `    margin-bottom: ${spacing.margin.bottom};\n`;
+                }
             }
 
             // Couleur
@@ -88,7 +93,7 @@ function generateFonts() {
     // Responsive spacing
     css += `/* Responsive spacing */\n`;
     css += `@media (max-width: 768px) {\n`;
-    css += `    h1, h2, h3, h4, h5, h6 {\n`;
+    css += `    h1, h2, h3, h4, h5, h6, p {\n`;
     css += `        margin-bottom: 0.75rem;\n`;
     css += `    }\n`;
     css += `}\n`;

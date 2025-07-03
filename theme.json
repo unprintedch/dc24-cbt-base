@@ -8,7 +8,7 @@
                 {
                     "name": "Primary",
                     "slug": "primary",
-                    "color": "#CF2E2E"
+                    "color": "#b21221"
                 },
                 {
                     "name": "Primary-hover",
@@ -18,7 +18,7 @@
                 {
                     "name": "Secondary",
                     "slug": "secondary",
-                    "color": "#FF0000"
+                    "color": "#202E4E"
                 },
                 {
                     "name": "Secondary-hover",
@@ -67,6 +67,7 @@
         },
         "spacing": {
             "customSpacingSize": true,
+            "defaultSpacingSize": false,
             "spacingScale": {
                 "increment": 1.5,
                 "mediumStep": 1.5,
@@ -76,39 +77,24 @@
             },
             "spacingSizes": [
                 {
-                    "name": "2x plus petit",
-                    "size": "0.44rem",
-                    "slug": "20"
-                },
-                {
-                    "name": "x plus petit",
-                    "size": "clamp(0.75rem, 2vw, 1rem)",
-                    "slug": "30"
-                },
-                {
-                    "name": "Petite",
+                    "name": "Small",
                     "size": "clamp(1rem, 3vw, 1.5rem)",
                     "slug": "40"
                 },
                 {
-                    "name": "Moyenne",
+                    "name": "Medium",
                     "size": "clamp(1.5rem, 4vw, 2rem)",
                     "slug": "50"
                 },
                 {
-                    "name": "Grande",
+                    "name": "Large",
                     "size": "clamp(2rem, 5vw, 3rem)",
                     "slug": "60"
                 },
                 {
-                    "name": "x plus grand",
+                    "name": "Xlarge",
                     "size": "clamp(3rem, 7vw, 4rem)",
                     "slug": "70"
-                },
-                {
-                    "name": "2x plus grand",
-                    "size": "clamp(4rem, 10vw, 5rem)",
-                    "slug": "80"
                 }
             ],
             "units": [
@@ -158,11 +144,6 @@
                     "slug": "xxx-large",
                     "size": "2rem",
                     "name": "XXX Large"
-                },
-                {
-                    "slug": "huge",
-                    "size": "2.5rem",
-                    "name": "Huge"
                 }
             ],
             "fontFamilies": [
@@ -251,10 +232,13 @@
     },
     "styles": {
         "spacing": {
-            "blockGap": "1.2rem",
             "padding": {
                 "left": "var:preset|spacing|50",
                 "right": "var:preset|spacing|50"
+            },
+            "margin": {
+                "top": "0",
+                "bottom": "var:preset|spacing|50"
             }
         },
         "typography": {
@@ -275,6 +259,7 @@
                 },
                 "spacing": {
                     "margin": {
+                        "top": "1rem",
                         "bottom": "1rem"
                     }
                 }
@@ -291,6 +276,7 @@
                 },
                 "spacing": {
                     "margin": {
+                        "top": "1rem",
                         "bottom": "1rem"
                     }
                 }
@@ -304,6 +290,7 @@
                 },
                 "spacing": {
                     "margin": {
+                        "top": "1rem",
                         "bottom": "1rem"
                     }
                 }
@@ -317,6 +304,7 @@
                 },
                 "spacing": {
                     "margin": {
+                        "top": "1rem",
                         "bottom": "1rem"
                     }
                 }
@@ -330,6 +318,7 @@
                 },
                 "spacing": {
                     "margin": {
+                        "top": "1rem",
                         "bottom": "1rem"
                     }
                 }
@@ -343,7 +332,19 @@
                 },
                 "spacing": {
                     "margin": {
+                        "top": "1rem",
                         "bottom": "1rem"
+                    }
+                }
+            },
+            "p": {
+                "typography": {
+                    "fontSize": "1.125rem"
+                },
+                "spacing": {
+                    "margin": {
+                        "top": "0.5rem",
+                        "bottom": "0.5rem"
                     }
                 }
             }

@@ -38,3 +38,69 @@ ul.is-style-check {
     }
   }
 }
+ul.is-style-link {
+  @apply list-none text-[18px] font-medium;
+
+  li {
+    @apply flex items-start gap-2 mb-2 pt-2;
+
+    &:before {
+      @apply content-["\f0c6"] flex items-start justify-center pt-[2px];
+      font: var(--fa-font-regular);
+    }
+  }
+}
+
+/* Styles pour le block icon de Nick Diego */
+.wp-block-outermost-icon-block.is-style-bg-rounded-secondary {
+  @apply bg-secondary text-white rounded-full p-3 flex items-center justify-center;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+/* Style pour le block mark avec fond décalé */
+.wp-block-mark.is-style-tilted-bg {
+  @apply relative inline-block px-2 py-1;
+  transform: rotate(-3deg);
+  background: linear-gradient(135deg, var(--wp--preset--color--secondary) 0%, var(--wp--preset--color--primary) 100%);
+  color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les éléments mark HTML avec classe primary */
+mark {
+  @apply relative inline-block px-1 py-0.5 !bg-transparent text-inherit;
+  --highlight-color: var(--wp--preset--color--primary);
+  z-index: 1;
+}
+
+
+mark::after {
+  content: '';
+  position: absolute;
+  top: 0em;
+  left: -0.2em;
+  right: -0.2em;
+  bottom: 0;
+  background-color: var(--highlight-color);
+  opacity: 0.25;
+  z-index: -1;
+  transform: rotate(-3deg);
+  border-radius: 8px ;
+}
+
+.wp-block-columns:has(.is-style-diagonal-right) {
+  overflow: visible;
+}
+.wp-block-column.is-style-diagonal-slice {
+  background-color: var(--wp--preset--color--secondary);
+  color: white;
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 10% 100%);
+  padding: var(--wp--preset--spacing--70);
+  position: relative;
+  z-index: 10;
+  margin-left: -10%;
+  width: 110%;
+  padding-left: 10%;
+}

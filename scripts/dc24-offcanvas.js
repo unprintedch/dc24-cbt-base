@@ -1,8 +1,6 @@
 // Load offcanvas scripts
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("offcanvas.js loaded");
     var burgerIcon = document.getElementById("burger-icon");
     var offCanvas = document.getElementById("offcanvas");
     var overlay = document.getElementById("overlay");
@@ -29,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add click event listener to overlay
     overlay.addEventListener("click", toggleOffCanvas);
 });
-
-
 
 // Close offcanvas pressing Escape
 document.addEventListener("keyup", function (event) {

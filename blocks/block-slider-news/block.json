@@ -1,0 +1,17 @@
+{
+    "name": "dc24/slider-news",
+    "title": "Slider news",
+    "description": "Un carousel avec plusieurs cartes",
+    "category": "formatting",
+    "icon": "format-image",
+    "keywords": ["news", "carousel", "slider",  "dc24"],
+    "script": "file:./slider.js",
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "block-slider-news.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}

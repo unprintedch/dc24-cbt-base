@@ -1,4 +1,30 @@
 <?php  
+
+register_block_style(
+    'core/icon',
+    array(
+        'name'         => 'rounded-bg',
+        'label'        => __( 'Rounded background' ),
+    )
+);
+
+// Style pour le block icon de Nick Diego
+register_block_style(
+    'outermost/icon-block',
+    array(
+        'name'         => 'bg-rounded-secondary',
+        'label'        => __( 'Background rounded secondary' ),
+    )
+);
+register_block_style(
+    'core/column',
+    array(
+        'name'  => 'diagonal-slice',
+        'label' => 'Bord diagonal (gauche)',
+    )
+);
+
+
 register_block_style(
     'core/heading',
     array(
@@ -88,6 +114,13 @@ register_block_style(
     array(
         'name'      => 'check',
         'label'     => __( 'Check' ),
+    )
+);
+register_block_style(
+    'core/list',
+    array(
+        'name'      => 'link',
+        'label'     => __( 'Links' ),
     )
 );
 register_block_style(
